@@ -18,6 +18,8 @@ uniform float uWaveSeed;
 uniform int uWaveNumber;
 uniform int uOceanFetch;
 uniform float uWindSpeed;
+uniform float uChoppiness;
+uniform float uOceanSpeed;
 
 // viewspace data (this must match the output of the fragment shader)
 in VertexData {
@@ -55,10 +57,10 @@ vec3 calcNormal(vec3 position) {
 	normal.y = waves(uWaveNumber,position).y;
 	normal.x = waves(uWaveNumber, vec3(position.x+EPSILON, position.y,position.z)).y - normal.y;
 	normal.z = waves(uWaveNumber, vec3(position.x, position.y,position.z+EPSILON)).y - normal.y;
-	normal.y = EPSILON * uAmplitude;
+	normal.y = EPSILON;
 	normal = normalize(normal);
 
-	//normal = normalize(cross(binormal,tangent));
+	normal = normalize(cross(binormal,tangent));
 
 	
 
@@ -87,7 +89,7 @@ void main() {
 	float G = min(1,min(((2*dot(N,H)*dot(N,V))/dot(V,H)),((2*dot(N,H)*dot(N,L))/dot(V,H)))); //Geometrical Attenuation Factor
 
 	float a = acos(dot(N,H)); //Angle between N and H
-	float m = 0.1; //Root mean square slope of facets
+	float m = 0.3; //Root mean square slope of facets
 	float D = (exp((-pow(tan(a),2)/ pow(m,2)))) / (PI*pow(m,2)*pow(cos(a),4)) ; //Facet slope distribution function
 
 	float c = dot(V,H);

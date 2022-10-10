@@ -22,14 +22,16 @@ struct basic_model {
 	GLuint texture;
 	GLfloat time;
 	GLfloat amplitude = 1;
-	GLfloat waveLength = 5;
+	GLfloat waveLength = 1;
 	GLfloat period = 1;
 	glm::vec2 windDirection{0,1};
 	GLfloat gravity = 9.81;
 	GLfloat seed = 1.4872;
 	GLint waveNumber = 10;
-	GLfloat oceanFetch = 0.5;
+	GLfloat oceanFetch = 10;
 	GLfloat windSpeed = 10;
+	GLfloat choppiness = 0.5;
+	GLfloat oceanSpeed = 10;
 
 	void draw(const glm::mat4 &view, const glm::mat4 proj);
 };

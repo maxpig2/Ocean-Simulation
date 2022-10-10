@@ -39,14 +39,25 @@ void basic_model::draw(const glm::mat4 &view, const glm::mat4 proj) {
 	glUniform1f(glGetUniformLocation(shader, "uGravity"), gravity);
 	glUniform1f(glGetUniformLocation(shader, "uWaveSeed"), seed);
 	glUniform1i(glGetUniformLocation(shader, "uWaveNumber"), waveNumber);
-	glUniform1i(glGetUniformLocation(shader, "uOceanFetch"), oceanFetch);
+	glUniform1i(glGetUniformLocation(shader, "uOceanFetch"), (oceanFetch*100));
 	glUniform1f(glGetUniformLocation(shader, "uWindSpeed"), windSpeed);
+	glUniform1f(glGetUniformLocation(shader, "uChoppiness"), choppiness);
+	glUniform1f(glGetUniformLocation(shader, "uOceanSpeed"), oceanSpeed);
+
+
+
+	
+	cout << "amplitudeCalculated :" << 0.076 * pow((windSpeed*windSpeed)/(oceanFetch*gravity),0.22) << endl;
+	cout << "amplitudeMultipledByUAmp :" << 0.076 * pow((windSpeed*windSpeed)/(oceanFetch*gravity),0.22)*amplitude << endl;
 
 	//drawCylinder();
 	//drawSphere();
 	mesh.draw(); // draw
-	cout<< "windSpeed : " << windSpeed <<endl;
+	//cout<< "windSpeed : " << windSpeed <<endl;
 }
+
+
+
 
 Application::Application(GLFWwindow *window) : m_window(window) {
 	
@@ -81,7 +92,7 @@ Application::Application(GLFWwindow *window) : m_window(window) {
 	m_model.shader = shader;
 	m_model.mesh = load_wavefront_data(CGRA_SRCDIR + std::string("/res//assets//teapot.obj")).build();
 	m_model.mesh = createOceanMesh(100,20);
-	m_model.color = vec3(0, 0.15, 0.25);
+	m_model.color = vec3(0, 0.15*2, 0.25*2);
 	m_cam_pos = vec2( 0, 0 );
 }
 
@@ -218,6 +229,7 @@ void Application::renderGUI() {
 
 	if (ImGui::InputFloat("Ocean Fetch", &m_model.oceanFetch)) {}
 	if (ImGui::InputFloat("Wind Speed", &m_model.windSpeed)) {}
+	if (ImGui::InputFloat("Ocean Choppiness", &m_model.choppiness)) {}
 	
 
 	// finish creating window

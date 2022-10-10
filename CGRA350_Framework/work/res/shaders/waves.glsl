@@ -44,8 +44,8 @@ float usualParameters() {
 
 
 
-float calculateAmplitude() {
-	return 0.076 * pow((uWindSpeed*uWindSpeed)/(uOceanFetch*uGravity),0.22);
+float calculateAmplitude(float w) {
+	return (0.076 * pow((uWindSpeed*uWindSpeed)/(uOceanFetch*uGravity),0.22))*w;
 }
 
 
@@ -70,7 +70,7 @@ float normalizationFactor(float w){
 	float a = 1.0/2.0*sqrt(3.1415);
 	float b = (sw + 1)/(sw*0.5);
 	float c = a * b;
-	return 5.0;
+	//return 5.0;
 	return (c);
 }
 
@@ -81,10 +81,10 @@ vec2 dispersionRelation(float w) {
 	vec2 dir = normalize(vec2(seedWaveDirectionX, seedWaveDirectionY));
 	
 
-	float xDir =  normalizationFactor(w);// * pow(cos((uWindDirection.x - dir.x) / 2),2*sharpnessFactor(w));
-	float yDir =  normalizationFactor(w);// * pow(cos((uWindDirection.y - dir.y) / 2),2*sharpnessFactor(w));
+	float xDir =  normalizationFactor(w) * pow(cos((uWindDirection.x - dir.x) / 2),2*sharpnessFactor(w));
+	float yDir =  normalizationFactor(w) * pow(cos((uWindDirection.y - dir.y) / 2),2*sharpnessFactor(w));
 	//return vec2(5,1);
-	return normalize(vec2(xDir,yDir));
+	return normalize(vec2(xDir,yDir)+vec2(seedWaveDirectionX,seedWaveDirectionY));
 }
 
 
@@ -96,36 +96,41 @@ vec2 dispersionRelation(float w) {
 
 
 
-vec3 wave(float s, float wL, float p, vec2 dir, vec3 position, float speed, float choppiness){
+vec3 wave(float amp, float wL, vec2 dir, vec3 position, float speed, float choppiness){
 
 	dir = calculateDirection(rand(dir));
-	//choppiness = sharpnessFactor(choppiness);
 
+
+	//choppiness = sharpnessFactor(choppiness);
+	amp = calculateAmplitude(amp);
+	amp *= (uAmplitude) ;
+
+	choppiness = choppiness * uChoppiness;
 
 
 	if(choppiness > 1) {
 		choppiness = 1;
 	}
 	if (choppiness < 0){
-		choppiness = 0.5;
+		choppiness = 0.0;
 	}
 
 
 
-	float gravity = (uGravity/100);
+	float gravity = (uGravity/10);
 
-	float k = 2 * (3.1415/(wL*uWaveLength)) + 5;
+	float k = 2 * (3.1415/(wL*uWaveLength));
 	
 	float a = (choppiness/k);
 	
 	float c = sqrt(gravity/k);
-	float f = k * (dot(dir, position.xz) - c * uTime * speed);
+	float f = k * (dot(dir, position.xz) - c * uTime * uOceanSpeed * speed);
 
 	float x = position.x + dir.x * (a * cos(f));
 	float y = a * sin (f);
 	float z = position.z + dir.y * (a * cos(f));
 
-	return vec3(x,y* uAmplitude,z);
+	return vec3(x,y * amp,z);
 }
 
 
@@ -135,11 +140,17 @@ vec3 wave(float s, float wL, float p, vec2 dir, vec3 position, float speed, floa
 
 vec3 waves(int iterations, vec3 position) {
 	vec3 gerstnerWave = vec3(0);
-	for (int i = 0; i < uWaveNumber; i ++) {
-		float period = i + 1;
-		float w = 2.0 * 3.1415 * 1.0 / period;
 
-		float seedAmp = rand(vec2(uWaveSeed * i,uWaveSeed * i))+0.1;
+	float amp = 1;
+
+	for (int i = uWaveNumber; i > 0; i --) {
+
+
+
+		float w = 2.0 * 3.1415 * 1.0 + i;
+
+		float seedAmp = rand(vec2(uWaveSeed * amp,uWaveSeed * amp))+0.1;
+
 		float seedWaveLength = rand(vec2(uWaveSeed * i*i,uWaveSeed * i*i))+0.1;
 		float seedWavePeriod = rand(vec2(seedAmp*seedAmp * i*i+20,seedAmp*seedAmp * i*i+20))+0.1;
 		float seedWaveDirectionX = rand(vec2(uWaveSeed * i*i*6 + uWindDirection.x,uWaveSeed * i*i*38+ uWindDirection.y))+0.1;
@@ -147,19 +158,17 @@ vec3 waves(int iterations, vec3 position) {
 		
 		float seedWaveSpeed = rand(vec2(uWaveNumber+i, uWaveLength+i))+0.1;
 		vec2 direction = normalize(vec2(seedWaveDirectionX, seedWaveDirectionY));
-		direction = uWindDirection;
 
-		float amplitude = calculateAmplitude();
+		
+		//gerstnerWave += wave( seedAmp*uOceanFetch, seedWaveLength+i, direction, position, seedWaveSpeed + i , 1);
 
-		float frequencyMin = 1;
-		float frequencyMax = 5;
-		float frequencyDivisions = 10;
-		float frequencyStep = (frequencyMax - frequencyMin)/frequencyDivisions;
-
-		gerstnerWave += wave( calculateAmplitude() , seedWaveLength, seedWavePeriod, direction, position, seedWaveSpeed*uWindSpeed , 1);
+		gerstnerWave+= wave(seedAmp*uOceanFetch, seedWaveLength*10, dispersionRelation(w), position, seedWaveSpeed , sharpnessFactor(seedAmp*i));
+		
+		//gerstnerWave+= wave(seedAmp*uOceanFetch+i, seedWaveLength*15, direction, position, seedWaveSpeed + (i/10) , sharpnessFactor(seedAmp*i));
+		amp = amp*0.7;
 
 	}
-	return gerstnerWave/(uWaveNumber * 1);
+	return gerstnerWave;
 }
 
 

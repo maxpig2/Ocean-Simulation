@@ -14,6 +14,8 @@ uniform float uWaveSeed;
 uniform int uWaveNumber;
 uniform int uOceanFetch;
 uniform float uWindSpeed;
+uniform float uChoppiness;
+uniform float uOceanSpeed;
 
 // mesh data
 layout(location = 0) in vec3 aPosition;
@@ -97,7 +99,7 @@ void main() {
 	x = aPosition.x + windDirection.x * (amplitude * cos(f));
 	y = amplitude * sin (f);
 	z = aPosition.z + windDirection.y * (amplitude * cos(f));
-	vec3 gerstnerWave = vec3(x,y,z);
+	vec3 gerstnerWave = vec3(0,0,0);
 	
 
 	gerstnerWave = waves(uWaveNumber, aPosition);
