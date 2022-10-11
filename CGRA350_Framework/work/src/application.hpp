@@ -17,7 +17,7 @@
 struct basic_model {
 	GLuint shader = 0;
 	cgra::gl_mesh mesh;
-	glm::vec3 color{0,0,0.7};
+	glm::vec3 color{0,0.2,0.7};
 	glm::mat4 modelTransform{1.0};
 	GLuint texture;
 	GLfloat time;
@@ -31,6 +31,9 @@ struct basic_model {
 	GLfloat windSpeed = 10;
 	GLfloat choppiness = 0.5;
 	GLfloat oceanSpeed = 10;
+
+
+
 
 	void draw(const glm::mat4 &view, const glm::mat4 proj);
 };

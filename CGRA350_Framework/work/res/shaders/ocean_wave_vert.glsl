@@ -105,26 +105,6 @@ void main() {
 	gerstnerWave = waves(uWaveNumber, aPosition);
 	
 
-
-	//JONSWAP Wave Spectra
-	//float waveSpectrumBase = (0.0081 * gravity * gravity)/angularVelocity;
-	float peakFrequency = (0.855 * gravity)/windSpeed;
-	float Pierson_Moskowitz_Exponent = ((-5.0/4.0)*pow(peakFrequency/angularVelocity,4));
-	//float Pierson_Moskowitz_Spectra =  pow(waveSpectrumBase,)
-	//float JONSWAP_Spectra =  
-	float JONSWAP_Sigma = 0.5;
-	
-	//tangent = normalize(vec3 (1 - k * amplitude * sin(f), k * amplitude * cos(f), 0 ));
-	//gerstnerWave/=6;
-	//tangent/=6;
-
-	//Calculate Normal
-	//vec3 normal = vec3(-tangent.y, tangent.x, 0);
-	//normal = normalize(cross(binormal,tangent));
-
-
-
-
 	vec3 normal = vec3(1,1,1);//calcNormal(gerstnerWave);
 
 

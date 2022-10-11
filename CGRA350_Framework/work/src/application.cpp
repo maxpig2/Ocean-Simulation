@@ -91,7 +91,7 @@ Application::Application(GLFWwindow *window) : m_window(window) {
 	m_model.shader = shader;
 	m_model.mesh = load_wavefront_data(CGRA_SRCDIR + std::string("/res//assets//teapot.obj")).build();
 	m_model.mesh = createOceanMesh(100,20);
-	m_model.color = vec3(0, 0.15*2, 0.25*2);
+	m_model.color = vec3(0, 0.3, 0.5);
 	m_cam_pos = vec2( 0, 0 );
 }
 
@@ -178,23 +178,10 @@ void Application::renderGUI() {
 		m_model.mesh = createOceanMesh(oceanMeshDivisions, oceanMeshRadius);
 	}
 
+/*
 	ImGui::Separator();
+	
 	ImGui::Text("Shaders");
-	if (ImGui::Button("Simple Shader")){
-		shader_builder sb;
-   		sb.set_shader(GL_VERTEX_SHADER, CGRA_SRCDIR + std::string("//res//shaders//ocean_wave_vert.glsl"));
-		sb.set_shader(GL_FRAGMENT_SHADER, CGRA_SRCDIR + std::string("//res//shaders//color_frag.glsl"));
-		GLuint shader = sb.build();
-		m_model.shader = shader;
-	}
-	ImGui::SameLine();
-	if (ImGui::Button("Cook Torrance")){
-		shader_builder sb;
-   		 sb.set_shader(GL_VERTEX_SHADER, CGRA_SRCDIR + std::string("//res//shaders//ocean_wave_vert.glsl"));
-		sb.set_shader(GL_FRAGMENT_SHADER, CGRA_SRCDIR + std::string("//res//shaders//cook_torrance_frag.glsl"));
-		GLuint shader = sb.build();
-		m_model.shader = shader;
-	}
 	ImGui::SameLine();
 	if (ImGui::Button("Oren Nayar")){
 		shader_builder sb;
@@ -203,14 +190,7 @@ void Application::renderGUI() {
 		GLuint shader = sb.build();
 		m_model.shader = shader;
 	}
-	ImGui::SameLine();
-	if (ImGui::Button("Textures")){
-		shader_builder sb;
-   		 sb.set_shader(GL_VERTEX_SHADER, CGRA_SRCDIR + std::string("//res//shaders//texture_vert.glsl"));
-		sb.set_shader(GL_FRAGMENT_SHADER, CGRA_SRCDIR + std::string("//res//shaders//texture_frag.glsl"));
-		GLuint shader = sb.build();
-		m_model.shader = shader;
-	}
+	*/
 
 	ImGui::Separator();
 	ImGui::Text("Ocean Mesh Attributes");
@@ -225,9 +205,43 @@ void Application::renderGUI() {
 
 	if (ImGui::InputFloat("Ocean Fetch", &m_model.oceanFetch)) {}
 	if (ImGui::InputFloat("Wind Speed", &m_model.windSpeed)) {}
-	if (ImGui::InputFloat("Ocean Choppiness", &m_model.choppiness)) {}
+	if (ImGui::SliderFloat("Ocean Choppiness", (&m_model.choppiness),0,1,"%.2f")) {}
 	if(ImGui::SliderFloat3("Ocean Colour", value_ptr(m_model.color),0,1,"%.2f")){}
+	ImGui::Separator();
+	ImGui::Text("Presets");
+	if(ImGui::Button("Reset Ocean")){
+		m_model.amplitude = 1;
+		m_model.waveLength = 1;
+		m_model.gravity = 9.81;
+		m_model.waveNumber = 10;
+		oceanMeshDivisions = 100;
+		oceanMeshRadius = 20;
+		m_model.mesh = createOceanMesh(oceanMeshDivisions, oceanMeshRadius);
+		m_model.oceanFetch = 10;
+		m_model.windSpeed = 10;
+		m_model.choppiness = 0.5;
+		m_model.color = vec3(0, 0.3, 0.5);
+	}
+	ImGui::SameLine();
+	if(ImGui::Button("Large Ocean")){
+		m_model.amplitude = 20;
+		m_model.waveLength = 1;
+		m_model.gravity = 9.81;
+		m_model.waveNumber = 25;
+		oceanMeshDivisions = 200;
+		oceanMeshRadius = 40;
+		m_model.mesh = createOceanMesh(oceanMeshDivisions, oceanMeshRadius);
+		m_model.oceanFetch = 8;
+		m_model.windSpeed = 10;
+		m_model.choppiness = 0.2;
+	}
+	ImGui::SameLine();
+	if(ImGui::Button("Tropical Ocean")){
+		m_model.color = vec3(0, 0.44, 0.80);
+	}
 	
+	
+
 
 	// finish creating window
 	ImGui::End();
@@ -303,7 +317,6 @@ gl_mesh Application::createOceanMesh(float subdivisions, float radius){
 	vector<vec2> uvs;
 	vector<int> indices;
 
-	//Top
 	for (int i = 0; i <= subdivisions; i++) {
 		for (int j = 0; j <= subdivisions; j++) {
 			float x  = -((i-(subdivisions/2))/(subdivisions/2));
@@ -311,12 +324,8 @@ gl_mesh Application::createOceanMesh(float subdivisions, float radius){
 			float z = ((j-(subdivisions/2))/(subdivisions/2));
 			float xSquared = x*x;
 			float ySquared = y*y;
-			float zSquared = z*z;
-			//x = x * sqrt(1-(ySquared/2)-(zSquared/2)+((ySquared*zSquared)/3));
-			//y = y * sqrt(1-(zSquared/2) - (xSquared/2) + ((zSquared*xSquared)/3));
-			//z = z * sqrt(1-(xSquared/2) - (ySquared/2) + ((xSquared*ySquared)/3));	
+			float zSquared = z*z;	
 			x *= radius;
-			//y *= radius;
 			z *= radius;
 			positions.push_back(vec3(x,y,z));
 			normals.push_back(vec3(0,1,0));

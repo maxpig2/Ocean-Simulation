@@ -62,15 +62,11 @@ float sharpnessFactor(float w) {
 }
 
 
-
-
-
 float normalizationFactor(float w){
 	float sw = sharpnessFactor(w);
 	float a = 1.0/2.0*sqrt(3.1415);
 	float b = (sw + 1)/(sw*0.5);
 	float c = a * b;
-	//return 5.0;
 	return (c);
 }
 
@@ -79,22 +75,10 @@ vec2 dispersionRelation(float w) {
 	float seedWaveDirectionX = rand(vec2(uWaveSeed * i*i*6 + uWindDirection.x,uWaveSeed * i*i*38+ uWindDirection.y))+0.1;
 	float seedWaveDirectionY = rand(vec2(uWaveSeed * i*i + uWindDirection.x,uWaveSeed * i*i+uWindDirection.y))+0.1;
 	vec2 dir = normalize(vec2(seedWaveDirectionX, seedWaveDirectionY));
-	
-
 	float xDir =  normalizationFactor(w) * pow(cos((uWindDirection.x - dir.x) / 2),2*sharpnessFactor(w));
 	float yDir =  normalizationFactor(w) * pow(cos((uWindDirection.y - dir.y) / 2),2*sharpnessFactor(w));
-	//return vec2(5,1);
 	return normalize(vec2(xDir,yDir)+vec2(seedWaveDirectionX,seedWaveDirectionY));
 }
-
-
-
-
-
-
-
-
-
 
 vec3 wave(float amp, float wL, vec2 dir, vec3 position, float speed, float choppiness){
 
@@ -102,20 +86,14 @@ vec3 wave(float amp, float wL, vec2 dir, vec3 position, float speed, float chopp
 
 
 	choppiness = sharpnessFactor(choppiness);
-	//amp = calculateAmplitude(amp);
-	//amp *= (uAmplitude) ;
 
 	choppiness = choppiness * uChoppiness;
-
-
 	if(choppiness > 1) {
 		choppiness = 1;
 	}
 	if (choppiness < 0){
 		choppiness = 0.0;
 	}
-
-
 
 	float gravity = (uGravity/10);
 
@@ -132,11 +110,6 @@ vec3 wave(float amp, float wL, vec2 dir, vec3 position, float speed, float chopp
 
 	return vec3(x,y * uAmplitude,z);
 }
-
-
-
-
-
 
 vec3 waves(int iterations, vec3 position) {
 	vec3 gerstnerWave = vec3(0);
@@ -159,8 +132,6 @@ vec3 waves(int iterations, vec3 position) {
 		amp *= 0.7;
 		waveLen *= 0.9;
 		waveSpe *= 0.85;
-
-
 	}
 	gerstnerWave.xz /= uWaveNumber;
 
