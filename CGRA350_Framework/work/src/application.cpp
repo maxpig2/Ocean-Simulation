@@ -39,7 +39,7 @@ void basic_model::draw(const glm::mat4 &view, const glm::mat4 proj) {
 	glUniform1f(glGetUniformLocation(shader, "uGravity"), gravity);
 	glUniform1f(glGetUniformLocation(shader, "uWaveSeed"), seed);
 	glUniform1i(glGetUniformLocation(shader, "uWaveNumber"), waveNumber);
-	glUniform1i(glGetUniformLocation(shader, "uOceanFetch"), (oceanFetch*100));
+	glUniform1i(glGetUniformLocation(shader, "uOceanFetch"), (oceanFetch*1000));
 	glUniform1f(glGetUniformLocation(shader, "uWindSpeed"), windSpeed);
 	glUniform1f(glGetUniformLocation(shader, "uChoppiness"), choppiness);
 	glUniform1f(glGetUniformLocation(shader, "uOceanSpeed"), oceanSpeed);

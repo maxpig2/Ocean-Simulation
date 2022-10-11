@@ -101,9 +101,9 @@ vec3 wave(float amp, float wL, vec2 dir, vec3 position, float speed, float chopp
 	dir = calculateDirection(rand(dir));
 
 
-	//choppiness = sharpnessFactor(choppiness);
+	choppiness = sharpnessFactor(choppiness);
 	//amp = calculateAmplitude(amp);
-	amp *= (uAmplitude) ;
+	//amp *= (uAmplitude) ;
 
 	choppiness = choppiness * uChoppiness;
 
@@ -148,6 +148,8 @@ vec3 waves(int iterations, vec3 position) {
 	for (int i = uWaveNumber; i > 0; i --) {
 
 
+		
+
 
 		float w = 2.0 * 3.1415 * 1.0 + i;
 		//w = rand(vec2(w,w*2));amp
@@ -165,19 +167,25 @@ vec3 waves(int iterations, vec3 position) {
 		float seedWaveSpeed = rand(vec2(uWaveNumber+i, uWaveLength+i))+0.1;
 		vec2 direction = normalize(vec2(seedWaveDirectionX, seedWaveDirectionY));
 
+
+		float seed_wave = rand(vec2(uWaveSeed * i * 20 +0.2, i*i * 34 +0.6)) * 100 + 0.1;
+		float amplitude_wave = calculateAmplitude(seed_wave) * amp;
+		float length_wave = waveLen * uWaveLength + 0.1;
+		vec2  direction_wave = dispersionRelation(seed_wave);
+		float speed_wave = waveSpe + (uWindSpeed/10) + 0.1;
+		float sharpness_wave = 1;
+
+		gerstnerWave += wave(amplitude_wave, length_wave, direction_wave, position, speed_wave, sharpness_wave);
 		
-		gerstnerWave += wave(calculateAmplitude(seedAmp)*100000*amp, waveLen*uWaveLength, dispersionRelation(seedWaveDirectionX+seedWaveDirectionY), position, waveSpe, sharpnessFactor(i));
 
-
+		//gerstnerWave += wave(pow(calculateAmplitude(seedAmp)*amp,2), waveLen*uWaveLength + 0.1, dispersionRelation(waveSeed), position, waveSpe * (uWindSpeed/10) + .1, sharpnessFactor(i));
 		//gerstnerWave += wave( seedAmp*uOceanFetch, seedWaveLength+i, direction, position, seedWaveSpeed + i , 1);
-
 		//gerstnerWave += wave(seedAmp*uOceanFetch, seedWaveLength, direction, position, i/5 , sharpnessFactor(seedAmp*i));
-		
 		//gerstnerWave+= wave(seedAmp*uOceanFetch+i, seedWaveLength*15, direction, position, seedWaveSpeed + (i/10) , sharpnessFactor(seedAmp*i));
 
-		amp = amp*0.2;
-		//waveLen *= 0.9;
-		//waveSpe *= 0.85;
+		amp *= 0.4;
+		waveLen *= 0.9;
+		waveSpe *= 0.85;
 
 
 	}
