@@ -71,9 +71,10 @@ vec3 calcNormal(vec3 position) {
 
 
 void main() {
-	vec3 eye = normalize(-f_in.position);
-	vec3 light = vec3(0,0.5,1);
+	//vec3 eye = normalize(-f_in.position);
+	//vec3 light = vec3(0,0.5,1);
 	
+	/*
 	float PI = 3.1415;
 	//Colours
 	vec3 objectColour = uColor;
@@ -103,10 +104,10 @@ void main() {
 	Rs = (D*G*F)/(4*dot(N,L)*dot(N,V));
 
 	float diffuse = max(dot(N,L),0.0);
-	float k = 0.0; // Extinction Coefficient
+	float k = 0.6; // Extinction Coefficient
 
 	float specularity  = 0.0;
-	float shininess = .1;
+	float shininess = 0.00;
 	
 	if (diffuse > 0.0){
 	vec3 Haa = normalize(L+V);
@@ -120,10 +121,10 @@ void main() {
 	vec3 fragColour = ((diffuse + heightColRamp) * objectColour) +  (lightColour * specularColour * (k + Rs * (1.0 - k))) + baseCol ;
 	
 
+*/
 
 
-
-	/*
+	
 	float PI = 3.1415;
 	// calculate lighting (hack)
 	vec3 eye = normalize(-f_in.position);
@@ -176,7 +177,7 @@ void main() {
 		heightColRamp = 0;
 	}
 	vec3 fragColour = ((diffuse + 1 + (f_in.heightPos/10) ) * objectColour) + specularity + baseCol;
-	*/
+	
 
 	// output to the frambuffer
 	fb_color = vec4(fragColour, 1);

@@ -196,7 +196,7 @@ vec3 waves(int iterations, vec3 position) {
 
 		gerstnerWave += wave(amplitude_wave, length_wave, direction_wave, position, speed_wave, sharpness_wave);
 		
-		amp *= 0.7;
+		amp *= 0.2;
 		waveLen *= 0.9;
 		waveSpe *= 0.85;
 
@@ -226,7 +226,7 @@ vec3 waves_normal(int iterations, vec3 position) {
 
 		wave_normal(amplitude_wave, length_wave, direction_wave, position, speed_wave, sharpness_wave, tangent, binormal);
 		
-		amp *= 0.7;
+		amp *= 0.2;
 		waveLen *= 0.9;
 		waveSpe *= 0.85;
 
