@@ -23,7 +23,6 @@ struct basic_model {
 	GLfloat time;
 	GLfloat amplitude = 1;
 	GLfloat waveLength = 1;
-	GLfloat period = 1;
 	glm::vec2 windDirection{0,1};
 	GLfloat gravity = 9.81;
 	GLfloat seed = 1.4872;

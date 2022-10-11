@@ -34,7 +34,6 @@ void basic_model::draw(const glm::mat4 &view, const glm::mat4 proj) {
 	glUniform1f(glGetUniformLocation(shader, "uTime"), time);
 	glUniform1f(glGetUniformLocation(shader, "uAmplitude"), amplitude);
 	glUniform1f(glGetUniformLocation(shader, "uWaveLength"), waveLength);
-	glUniform1f(glGetUniformLocation(shader, "uPeriod"), period);
 	glUniform2fv(glGetUniformLocation(shader, "uWindDirection"), 1 , value_ptr(windDirection));
 	glUniform1f(glGetUniformLocation(shader, "uGravity"), gravity);
 	glUniform1f(glGetUniformLocation(shader, "uWaveSeed"), seed);
@@ -218,11 +217,8 @@ void Application::renderGUI() {
 	if (ImGui::InputInt("Wave Divisions", &oceanMeshDivisions)) {m_model.mesh = createOceanMesh(oceanMeshDivisions, oceanMeshRadius);}
 	if (ImGui::InputInt("Wave Size", &oceanMeshRadius)) {m_model.mesh = createOceanMesh(oceanMeshDivisions, oceanMeshRadius);}
 	if (ImGui::InputFloat("Wave Amplitude", &m_model.amplitude)) {}
-	if (ImGui::InputFloat("Wave Period", &m_model.period)) {}
 	if (ImGui::InputFloat("Wave Length", &m_model.waveLength)) {}
-	if (ImGui::InputFloat("Wind Direction X", &m_model.windDirection.x)) {}
-	ImGui::SameLine();
-	if (ImGui::InputFloat("Wind Direction Y", &m_model.windDirection.y)) {}
+	if (ImGui::SliderFloat2("Wind Direction", value_ptr(m_model.windDirection),0,1,"%.2f")) {}
 	if (ImGui::InputFloat("Gravity", &m_model.gravity)) {}
 	if (ImGui::InputFloat("Ocean Seed", &m_model.seed)) {}
 	if (ImGui::InputInt("Wave Number", &m_model.waveNumber)) {}
@@ -230,6 +226,7 @@ void Application::renderGUI() {
 	if (ImGui::InputFloat("Ocean Fetch", &m_model.oceanFetch)) {}
 	if (ImGui::InputFloat("Wind Speed", &m_model.windSpeed)) {}
 	if (ImGui::InputFloat("Ocean Choppiness", &m_model.choppiness)) {}
+	if(ImGui::SliderFloat3("Ocean Colour", value_ptr(m_model.color),0,1,"%.2f")){}
 	
 
 	// finish creating window

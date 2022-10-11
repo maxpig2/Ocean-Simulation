@@ -147,29 +147,8 @@ vec3 waves(int iterations, vec3 position) {
 
 	for (int i = uWaveNumber; i > 0; i --) {
 
-
-		
-
-
-		float w = 2.0 * 3.1415 * 1.0 + i;
-		//w = rand(vec2(w,w*2));amp
-
-		float calculatedAmp = calculateAmplitude(amp);
-
-		float seedAmp = rand(vec2(uWaveSeed * amp,uWaveSeed))+0.1;
-	//	seedAmp *= calculateAmplitude(seedAmp);
-
-		float seedWaveLength = rand(vec2(uWaveSeed * i*i,uWaveSeed * i*i))+0.1;
-		float seedWavePeriod = rand(vec2(seedAmp*seedAmp * i*i+20,seedAmp*seedAmp * i*i+20))+0.1;
-		float seedWaveDirectionX = rand(vec2(uWaveSeed * i*i*6 + uWindDirection.x,uWaveSeed * i*i*38+ uWindDirection.y))+0.1;
-		float seedWaveDirectionY = rand(vec2(uWaveSeed * i*i + uWindDirection.x,uWaveSeed * i*i+uWindDirection.y))+0.1;
-		
-		float seedWaveSpeed = rand(vec2(uWaveNumber+i, uWaveLength+i))+0.1;
-		vec2 direction = normalize(vec2(seedWaveDirectionX, seedWaveDirectionY));
-
-
 		float seed_wave = rand(vec2(uWaveSeed * i * 20 +0.2, i*i * 34 +0.6)) * 100 + 0.1;
-		float amplitude_wave = calculateAmplitude(seed_wave) * amp;
+		float amplitude_wave = calculateAmplitude(seed_wave) * amp * 10;
 		float length_wave = waveLen * uWaveLength + 0.1;
 		vec2  direction_wave = dispersionRelation(seed_wave);
 		float speed_wave = waveSpe + (uWindSpeed/10) + 0.1;
@@ -177,13 +156,7 @@ vec3 waves(int iterations, vec3 position) {
 
 		gerstnerWave += wave(amplitude_wave, length_wave, direction_wave, position, speed_wave, sharpness_wave);
 		
-
-		//gerstnerWave += wave(pow(calculateAmplitude(seedAmp)*amp,2), waveLen*uWaveLength + 0.1, dispersionRelation(waveSeed), position, waveSpe * (uWindSpeed/10) + .1, sharpnessFactor(i));
-		//gerstnerWave += wave( seedAmp*uOceanFetch, seedWaveLength+i, direction, position, seedWaveSpeed + i , 1);
-		//gerstnerWave += wave(seedAmp*uOceanFetch, seedWaveLength, direction, position, i/5 , sharpnessFactor(seedAmp*i));
-		//gerstnerWave+= wave(seedAmp*uOceanFetch+i, seedWaveLength*15, direction, position, seedWaveSpeed + (i/10) , sharpnessFactor(seedAmp*i));
-
-		amp *= 0.4;
+		amp *= 0.7;
 		waveLen *= 0.9;
 		waveSpe *= 0.85;
 

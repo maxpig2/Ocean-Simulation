@@ -125,7 +125,7 @@ void main() {
 
 
 
-	vec3 normal = calcNormal(gerstnerWave);
+	vec3 normal = vec3(1,1,1);//calcNormal(gerstnerWave);
 
 
 
