@@ -102,7 +102,7 @@ vec3 wave(float amp, float wL, vec2 dir, vec3 position, float speed, float chopp
 
 
 	//choppiness = sharpnessFactor(choppiness);
-	amp = calculateAmplitude(amp);
+	//amp = calculateAmplitude(amp);
 	amp *= (uAmplitude) ;
 
 	choppiness = choppiness * uChoppiness;
@@ -130,7 +130,7 @@ vec3 wave(float amp, float wL, vec2 dir, vec3 position, float speed, float chopp
 	float y = a * sin (f);
 	float z = position.z + dir.y * (a * cos(f));
 
-	return vec3(x,y * amp,z);
+	return vec3(x,y * uAmplitude,z);
 }
 
 
@@ -142,14 +142,20 @@ vec3 waves(int iterations, vec3 position) {
 	vec3 gerstnerWave = vec3(0);
 
 	float amp = 1;
+	float waveLen = 5;
+	float waveSpe = 0.5;
 
 	for (int i = uWaveNumber; i > 0; i --) {
 
 
 
 		float w = 2.0 * 3.1415 * 1.0 + i;
+		//w = rand(vec2(w,w*2));amp
 
-		float seedAmp = rand(vec2(uWaveSeed * amp,uWaveSeed * amp))+0.1;
+		float calculatedAmp = calculateAmplitude(amp);
+
+		float seedAmp = rand(vec2(uWaveSeed * amp,uWaveSeed))+0.1;
+	//	seedAmp *= calculateAmplitude(seedAmp);
 
 		float seedWaveLength = rand(vec2(uWaveSeed * i*i,uWaveSeed * i*i))+0.1;
 		float seedWavePeriod = rand(vec2(seedAmp*seedAmp * i*i+20,seedAmp*seedAmp * i*i+20))+0.1;
@@ -160,14 +166,23 @@ vec3 waves(int iterations, vec3 position) {
 		vec2 direction = normalize(vec2(seedWaveDirectionX, seedWaveDirectionY));
 
 		
+		gerstnerWave += wave(calculateAmplitude(seedAmp)*100000*amp, waveLen*uWaveLength, dispersionRelation(seedWaveDirectionX+seedWaveDirectionY), position, waveSpe, sharpnessFactor(i));
+
+
 		//gerstnerWave += wave( seedAmp*uOceanFetch, seedWaveLength+i, direction, position, seedWaveSpeed + i , 1);
 
-		gerstnerWave+= wave(seedAmp*uOceanFetch, seedWaveLength*10, dispersionRelation(w), position, seedWaveSpeed , sharpnessFactor(seedAmp*i));
+		//gerstnerWave += wave(seedAmp*uOceanFetch, seedWaveLength, direction, position, i/5 , sharpnessFactor(seedAmp*i));
 		
 		//gerstnerWave+= wave(seedAmp*uOceanFetch+i, seedWaveLength*15, direction, position, seedWaveSpeed + (i/10) , sharpnessFactor(seedAmp*i));
-		amp = amp*0.7;
+
+		amp = amp*0.2;
+		//waveLen *= 0.9;
+		//waveSpe *= 0.85;
+
 
 	}
+	gerstnerWave.xz /= uWaveNumber;
+
 	return gerstnerWave;
 }
 
