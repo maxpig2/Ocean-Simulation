@@ -35,10 +35,12 @@ in VertexData {
 out vec4 fb_color;
 
 vec3 waves(int iterations, vec3 position);
+vec3 waves_normal(int iterations, vec3 position);
 
 
 vec3 calcNormal(vec3 position) {
-	vec3 normal = waves(uWaveNumber,position);
+	vec3 normal = waves_normal(uWaveNumber,position);
+	/*
 	//normal
 	const float EPSILON = 0.001; 
 	vec3 tangent = waves(uWaveNumber, vec3(position.x+EPSILON, position.y,position.z)) - normal;
@@ -63,7 +65,7 @@ vec3 calcNormal(vec3 position) {
 	normal = normalize(cross(binormal,tangent));
 
 	
-
+*/
 	return -normal;
 }
 

@@ -133,6 +133,46 @@ vec3 wave(float amp, float wL, vec2 dir, vec3 position, float speed, float chopp
 	return vec3(x,y * uAmplitude,z);
 }
 
+void wave_normal(float amp, float wL, vec2 dir, vec3 position, float speed, float choppiness, inout vec3 tangent, inout vec3 binormal){
+
+	dir = calculateDirection(rand(dir));
+
+
+	choppiness = sharpnessFactor(choppiness);
+
+
+	choppiness = choppiness * uChoppiness;
+
+
+	if(choppiness > 1) {
+		choppiness = 1;
+	}
+	if (choppiness < 0){
+		choppiness = 0.0;
+	}
+
+
+
+	float gravity = (uGravity/10);
+
+	float k = 2 * (3.1415/(wL*uWaveLength));
+	
+	float a = (choppiness/k);
+	
+	float c = sqrt(gravity/k);
+	float f = k * (dot(dir, position.xz) - c * uTime * uOceanSpeed * speed);
+
+	tangent += vec3(
+				-dir.x * dir.x * (choppiness * sin(f)),
+				dir.x * (choppiness * cos(f)),
+				-dir.x * dir.y * (choppiness * sin(f))
+			);
+	binormal += vec3(
+				-dir.x * dir.y * (choppiness * sin(f)),
+				dir.y * (choppiness * cos(f)),
+				-dir.y * dir.y * (choppiness * sin(f))
+			);
+}
 
 
 
@@ -167,5 +207,34 @@ vec3 waves(int iterations, vec3 position) {
 	return gerstnerWave;
 }
 
+vec3 waves_normal(int iterations, vec3 position) {
+	vec3 normal = vec3(0);
+
+	float amp = 1;
+	float waveLen = 5;
+	float waveSpe = 0.5;
+	vec3 tangent = vec3(1, 0, 0);
+	vec3 binormal = vec3(0, 0, 1);
+	for (int i = uWaveNumber; i > 0; i --) {
+
+		float seed_wave = rand(vec2(uWaveSeed * i * 20 +0.2, i*i * 34 +0.6)) * 100 + 0.1;
+		float amplitude_wave = calculateAmplitude(seed_wave) * amp * 10;
+		float length_wave = waveLen * uWaveLength + 0.1;
+		vec2  direction_wave = dispersionRelation(seed_wave);
+		float speed_wave = waveSpe + (uWindSpeed/10) + 0.1;
+		float sharpness_wave = 1;
+
+		wave_normal(amplitude_wave, length_wave, direction_wave, position, speed_wave, sharpness_wave, tangent, binormal);
+		
+		amp *= 0.7;
+		waveLen *= 0.9;
+		waveSpe *= 0.85;
+
+
+	}
+	normal=normalize(cross(binormal, tangent));
+
+	return normal;
+}
 
 
