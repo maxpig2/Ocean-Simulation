@@ -35,17 +35,11 @@ float JONSWAP_sigma(float w) {
 
 float JONSWAP(float w,float R) {
 	float sigma = JONSWAP_sigma(w);
-	return waveSpectrumBase(w)*pow(R,JONSWAP_r(w,sigma)) * uAmplitude;
+	return waveSpectrumBase(w)*pow(0,JONSWAP_r(w,sigma)) * uAmplitude;
 }
-
-float usualParameters() {
-	return 0.076 * pow(((uWindSpeed*uWindSpeed)/(uOceanFetch*uGravity)),0.22);
-}
-
-
 
 float calculateAmplitude(float w) {
-	return (0.076 * pow((uWindSpeed*uWindSpeed)/(uOceanFetch*uGravity),0.22))*w;
+	return (0.076 * pow((uWindSpeed*uWindSpeed)/(uOceanFetch*uGravity),0.22))*w * JONSWAP(w,3.3);
 }
 
 
@@ -120,8 +114,11 @@ vec3 waves(int iterations, vec3 position) {
 
 	for (int i = uWaveNumber; i > 0; i --) {
 
-		float seed_wave = rand(vec2(uWaveSeed * i * 20 +0.2, i*i * 34 +0.6)) * 100 + 0.1;
+		float seed_wave = rand(vec2(uWaveSeed * i * 20 +0.2 + amp * 10, i*i * 34 +0.6 + amp * 20)) * 100 + 0.1 ;
+		//float amplitude_wave = calculateAmplitude(seed_wave) * amp * 10;
+
 		float amplitude_wave = calculateAmplitude(seed_wave) * amp * 10;
+	
 		float length_wave = waveLen * uWaveLength + 0.1;
 		vec2  direction_wave = dispersionRelation(seed_wave);
 		float speed_wave = waveSpe + (uWindSpeed/10) + 0.1;

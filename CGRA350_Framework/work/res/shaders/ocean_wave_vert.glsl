@@ -35,6 +35,10 @@ out VertexData {
 
 vec3 waves(int iterations, vec3 position);
 
+vec3 tangent = vec3(0,0,0);
+vec3 binormal = vec3(0,0,0);
+
+
 vec3 calcNormal(vec3 currentWaves) {
 	vec3 normal = currentWaves;
 	//normal
@@ -50,6 +54,9 @@ vec3 calcNormal(vec3 currentWaves) {
 	normal = normalize(cross(binormal,tangent));
 	return normal;
 }
+
+
+
 
 
 
@@ -106,8 +113,6 @@ void main() {
 	
 
 	vec3 normal = vec3(1,1,1);//calcNormal(gerstnerWave);
-
-
 
 	v_out.normal = normalize((uModelViewMatrix * vec4(normal, 0)).xyz);
 

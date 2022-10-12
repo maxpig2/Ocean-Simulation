@@ -43,7 +43,7 @@ void basic_model::draw(const glm::mat4 &view, const glm::mat4 proj) {
 	glUniform1f(glGetUniformLocation(shader, "uChoppiness"), choppiness);
 	glUniform1f(glGetUniformLocation(shader, "uOceanSpeed"), oceanSpeed);
 
-
+//
 
 	
 	cout << "amplitudeCalculated :" << 0.076 * pow((windSpeed*windSpeed)/(oceanFetch*gravity),0.22) << endl;
@@ -67,7 +67,7 @@ Application::Application(GLFWwindow *window) : m_window(window) {
 		std::stringstream vert;
 		vert << fileStream1.rdbuf();
 
-	std::ifstream fileStream2(CGRA_SRCDIR + std::string("//res//shaders//oren_nayar_frag.glsl"));
+	std::ifstream fileStream2(CGRA_SRCDIR + std::string("//res//shaders//ocean_wave_frag.glsl"));
 
 		std::stringstream frag;
 		frag << fileStream2.rdbuf();	
@@ -207,6 +207,9 @@ void Application::renderGUI() {
 	if (ImGui::InputFloat("Wind Speed", &m_model.windSpeed)) {}
 	if (ImGui::SliderFloat("Ocean Choppiness", (&m_model.choppiness),0,1,"%.2f")) {}
 	if(ImGui::SliderFloat3("Ocean Colour", value_ptr(m_model.color),0,1,"%.2f")){}
+	
+	
+
 	ImGui::Separator();
 	ImGui::Text("Presets");
 	if(ImGui::Button("Reset Ocean")){
@@ -237,6 +240,7 @@ void Application::renderGUI() {
 	}
 	ImGui::SameLine();
 	if(ImGui::Button("Tropical Ocean")){
+
 		m_model.color = vec3(0, 0.44, 0.80);
 	}
 	
