@@ -10,13 +10,10 @@ in VertexData {
 	vec3 position;
 	vec3 normal;
 	vec2 textureCoord;
-	mat3 tbn;
-	float heightPos;
 } f_in;
 
 // framebuffer output
 out vec4 fb_color;
-
 
 void main() {
 	// calculate lighting (hack)

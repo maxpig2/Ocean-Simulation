@@ -9,6 +9,7 @@
 #include "opengl.hpp"
 #include "cgra/cgra_mesh.hpp"
 #include "skeleton_model.hpp"
+#include "atmoshericScattering.hpp"
 
 
 // Basic model that holds the shader, mesh and transform for drawing.
@@ -31,6 +32,9 @@ struct basic_model {
 	GLfloat windSpeed = 10;
 	GLfloat choppiness = 0.5;
 	GLfloat oceanSpeed = 10;
+	GLfloat oceanPos = 0;
+	glm::vec3 oceanLightPosition = vec3(0,0.5,1);
+	glm::vec3 oceanCamPos = vec3(1,4,0);
 
 
 
@@ -66,6 +70,7 @@ private:
 
 	// geometry
 	basic_model m_model;
+	AtmoshericScattering scattering;
 
 	//Constants
 	const float PI = glm::pi<float>();

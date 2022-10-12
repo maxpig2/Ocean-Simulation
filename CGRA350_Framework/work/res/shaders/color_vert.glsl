@@ -9,14 +9,12 @@ uniform vec3 uColor;
 layout(location = 0) in vec3 aPosition;
 layout(location = 1) in vec3 aNormal;
 layout(location = 2) in vec2 aTexCoord;
-layout(location = 3) in vec3 aTangent;
 
 // model data (this must match the input of the vertex shader)
 out VertexData {
 	vec3 position;
 	vec3 normal;
 	vec2 textureCoord;
-	mat3 tbn;
 } v_out;
 
 void main() {
@@ -24,7 +22,7 @@ void main() {
 	v_out.position = (uModelViewMatrix * vec4(aPosition, 1)).xyz;
 	v_out.normal = normalize((uModelViewMatrix * vec4(aNormal, 0)).xyz);
 	v_out.textureCoord = aTexCoord;
-	
+
 	// set the screenspace position (needed for converting to fragment data)
 	gl_Position = uProjectionMatrix * uModelViewMatrix * vec4(aPosition, 1);
 }

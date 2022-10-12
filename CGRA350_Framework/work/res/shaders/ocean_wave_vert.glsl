@@ -16,6 +16,9 @@ uniform int uOceanFetch;
 uniform float uWindSpeed;
 uniform float uChoppiness;
 uniform float uOceanSpeed;
+uniform float uOceanBasePos;
+uniform vec3 uOceanLightPos;
+uniform vec3 uCamPos;
 
 // mesh data
 layout(location = 0) in vec3 aPosition;
