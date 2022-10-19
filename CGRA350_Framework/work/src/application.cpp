@@ -178,7 +178,7 @@ void Application::render() {
 	
 		m_model.time += 0.01;
 	// draw the model
-	m_model.oceanCamPos = vec3(m_cam_pos.x, m_cam_pos.y, -m_distance);
+	m_model.oceanCamPos = vec3(m_cam_pos.x, -m_cam_pos.y, -m_distance);
 	m_model.draw(view, proj);
 
 	// helpful draw options
@@ -264,6 +264,9 @@ void Application::renderGUI() {
 	if (ImGui::InputFloat("Wind Speed", &m_model.windSpeed)) {}
 	if (ImGui::SliderFloat("Ocean Choppiness", (&m_model.choppiness),0,1,"%.2f")) {}
 	if(ImGui::SliderFloat3("Ocean Colour", value_ptr(m_model.color),0,1,"%.2f")){}
+	if(ImGui::SliderFloat3("Atmosphere Camera", value_ptr(c_atmosphere),-3,3,"%.2f")){}
+
+//	if(ImGui::SliderFloat3("Camera Pos Manual", value_ptr(m_cam_pos),-3,3,"%.2f")){}
 	
 	
 
@@ -312,7 +315,7 @@ void Application::renderGUI() {
             scattering.sunDir.y = sdy;
             scattering.sunDir.z = sdz;
 			m_model.oceanLightPosition.y = sdy;
-			m_model.oceanLightPosition.y = sdz;
+			m_model.oceanLightPosition.z = sdz;
         }
         ImGui::Text("Planet Properties");
         if (ImGui::SliderFloat("Earth radius", &scattering.radius_earth, 6000., 7000.)) {

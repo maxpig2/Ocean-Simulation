@@ -79,6 +79,8 @@ private:
 	GLuint m_texture;
 	GLuint m_normal;
 
+	//Camera
+	vec3 c_atmosphere = vec3(0,0,0); 
 
 public:
 	// setup
