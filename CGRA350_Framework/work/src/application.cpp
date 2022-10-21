@@ -51,8 +51,8 @@ void basic_model::draw(const glm::mat4 &view, const glm::mat4 proj) {
 //
 
 	
-	cout << "amplitudeCalculated :" << 0.076 * pow((windSpeed*windSpeed)/(oceanFetch*gravity),0.22) << endl;
-	cout << "amplitudeMultipledByUAmp :" << 0.076 * pow((windSpeed*windSpeed)/(oceanFetch*gravity),0.22)*amplitude << endl;
+//	cout << "amplitudeCalculated :" << 0.076 * pow((windSpeed*windSpeed)/(oceanFetch*gravity),0.22) << endl;
+//	cout << "amplitudeMultipledByUAmp :" << 0.076 * pow((windSpeed*windSpeed)/(oceanFetch*gravity),0.22)*amplitude << endl;
 
 	//drawCylinder();
 	//drawSphere();
@@ -91,7 +91,8 @@ Application::Application(GLFWwindow *window) : m_window(window) {
 
 	m_texture = rgba_image(CGRA_SRCDIR + std::string("/res//textures//Texture.png")).uploadTexture(GL_RGBA8,0);
 	m_normal = rgba_image(CGRA_SRCDIR + std::string("/res//textures//NormalMap.png")).uploadTexture(GL_RGBA8,0);
-	
+    
+    
 	 /* --------- James' Part -------- */
     // Earth
     scattering.shader_earth = scattering.buildEarthShader();
@@ -105,18 +106,24 @@ Application::Application(GLFWwindow *window) : m_window(window) {
     
     // Initialize the camera's y-position by radius of the earth
     float camera_y = scattering.radius_earth;
-    m_cam_pos = vec2(0.f, camera_y+0.4);
+    m_cam_pos = vec2(0.f, camera_y + 4);
 	OceanYPos = camera_y-10;
     
+    float sdy = glm::sin(scattering.sunAngle);
+    float sdz = -glm::cos(scattering.sunAngle);
+    m_model.oceanLightPosition.y = sdy;
+    m_model.oceanLightPosition.z = sdz;
+    scattering.radius_earth = 6359.;
     /* --------- End  ---------*/
 
 	m_model.shader = shader;
 	m_model.mesh = load_wavefront_data(CGRA_SRCDIR + std::string("/res//assets//teapot.obj")).build();
-	m_model.mesh = createOceanMesh(100,20);
+	m_model.mesh = createOceanMesh(300, 150);
 	m_model.color = vec3(0, 0.3, 0.5);
 	m_model.oceanPos = OceanYPos; 
-	m_model.oceanCamPos = vec3(m_cam_pos.x, -m_cam_pos.y, -m_distance);
-	//m_cam_pos = vec2( 0, 0 );
+	m_model.oceanCamPos = vec3(-m_cam_pos.x, m_cam_pos.y, -m_distance);
+	m_model.oceanCamPos = vec3(0,0,1);
+
 }
 
 
@@ -178,7 +185,7 @@ void Application::render() {
 	
 		m_model.time += 0.01;
 	// draw the model
-	m_model.oceanCamPos = vec3(m_cam_pos.x, -m_cam_pos.y, -m_distance);
+	m_model.oceanCamPos = vec3(m_cam_pos.x, m_cam_pos.y, -m_distance);
 	m_model.draw(view, proj);
 
 	// helpful draw options
@@ -186,22 +193,12 @@ void Application::render() {
 	//if (m_show_axis) drawAxis(view, proj);
 	//glPolygonMode(GL_FRONT_AND_BACK, (m_showWireframe) ? GL_LINE : GL_FILL);
 
-	
-	/*
-	//Textures
-	glActiveTexture(GL_TEXTURE0);
-	glBindTexture(GL_TEXTURE_2D, m_texture);
-	glActiveTexture(GL_TEXTURE1);
-	glBindTexture(GL_TEXTURE_2D, m_normal);
-	*/
-
-
 }
 
 
 //Shape Attributes
-int oceanMeshDivisions = 100;
-int oceanMeshRadius = 20;
+int oceanMeshDivisions = 300;
+int oceanMeshRadius = 150;
 
 void Application::renderGUI() {
 
@@ -251,8 +248,8 @@ void Application::renderGUI() {
 
 	ImGui::Separator();
 	ImGui::Text("Ocean Mesh Attributes");
-	if (ImGui::InputInt("Wave Divisions", &oceanMeshDivisions)) {m_model.mesh = createOceanMesh(oceanMeshDivisions, oceanMeshRadius);}
-	if (ImGui::InputInt("Wave Size", &oceanMeshRadius)) {m_model.mesh = createOceanMesh(oceanMeshDivisions, oceanMeshRadius);}
+	if (ImGui::InputInt("Ocean Divisions", &oceanMeshDivisions)) {m_model.mesh = createOceanMesh(oceanMeshDivisions, oceanMeshRadius);}
+	if (ImGui::InputInt("Ocean Size", &oceanMeshRadius)) {m_model.mesh = createOceanMesh(oceanMeshDivisions, oceanMeshRadius);}
 	if (ImGui::InputFloat("Wave Amplitude", &m_model.amplitude)) {}
 	if (ImGui::InputFloat("Wave Length", &m_model.waveLength)) {}
 	if (ImGui::SliderFloat2("Wind Direction", value_ptr(m_model.windDirection),0,1,"%.2f")) {}
@@ -264,9 +261,6 @@ void Application::renderGUI() {
 	if (ImGui::InputFloat("Wind Speed", &m_model.windSpeed)) {}
 	if (ImGui::SliderFloat("Ocean Choppiness", (&m_model.choppiness),0,1,"%.2f")) {}
 	if(ImGui::SliderFloat3("Ocean Colour", value_ptr(m_model.color),0,1,"%.2f")){}
-	if(ImGui::SliderFloat3("Atmosphere Camera", value_ptr(c_atmosphere),-3,3,"%.2f")){}
-
-//	if(ImGui::SliderFloat3("Camera Pos Manual", value_ptr(m_cam_pos),-3,3,"%.2f")){}
 	
 	
 
@@ -278,7 +272,7 @@ void Application::renderGUI() {
 		m_model.gravity = 9.81;
 		m_model.waveNumber = 10;
 		oceanMeshDivisions = 100;
-		oceanMeshRadius = 20;
+		oceanMeshRadius = 200;
 		m_model.mesh = createOceanMesh(oceanMeshDivisions, oceanMeshRadius);
 		m_model.oceanFetch = 10;
 		m_model.windSpeed = 10;
@@ -292,7 +286,7 @@ void Application::renderGUI() {
 		m_model.gravity = 9.81;
 		m_model.waveNumber = 25;
 		oceanMeshDivisions = 200;
-		oceanMeshRadius = 40;
+		oceanMeshRadius = 400;
 		m_model.mesh = createOceanMesh(oceanMeshDivisions, oceanMeshRadius);
 		m_model.oceanFetch = 8;
 		m_model.windSpeed = 10;
@@ -316,21 +310,23 @@ void Application::renderGUI() {
             scattering.sunDir.z = sdz;
 			m_model.oceanLightPosition.y = sdy;
 			m_model.oceanLightPosition.z = sdz;
+			            cout << "SDY :" << sdy << endl;
+						cout << "SDZ :" << sdz << endl;
         }
         ImGui::Text("Planet Properties");
-        if (ImGui::SliderFloat("Earth radius", &scattering.radius_earth, 6000., 7000.)) {
+        if (ImGui::SliderFloat("Earth radius", &scattering.radius_earth, 6000., 6600.)) {
             if (scattering.radius_earth > scattering.radius_atmosphere)
                 scattering.radius_atmosphere = scattering.radius_earth;
         }
-        ImGui::SliderFloat("Atmosphere radius", &scattering.radius_atmosphere, scattering.radius_earth, 8000.);
+        ImGui::SliderFloat("Atmosphere radius", &scattering.radius_atmosphere, scattering.radius_earth, 6500.);
         
         // Coefficients
         ImGui::Text("Coefficient");
         ImGui::DragFloat3("Rayleigh Scattering Coefficient", glm::value_ptr(scattering.beta_R), 1e-4f, 0.0, 1.0, "%.4f");
         ImGui::SliderFloat("Rayleigh H0", &scattering.H_R, 1.0, scattering.radius_atmosphere - scattering.radius_earth);
         ImGui::DragFloat("Mie Scattering Coefficient", &scattering.beta_M, 1e-4f, 0.f, 1.0f, "%.4f");
-        ImGui::SliderFloat("Mie H0", &scattering.H_M, 1.0f, scattering.radius_atmosphere - scattering.radius_earth);
-        ImGui::SliderFloat("Anisotropy", &scattering.g, -1.0f, 1.0f);
+        ImGui::SliderFloat("Mie H0", &scattering.H_M, 0.5f, scattering.radius_atmosphere - scattering.radius_earth);
+        ImGui::SliderFloat("Anisotropy", &scattering.g, 0.5f, 0.9999f);
         
         ImGui::Text("Options");
         ImGui::SliderInt("Light Samples", &scattering.lightSamples, 1, 64);
@@ -341,7 +337,7 @@ void Application::renderGUI() {
         ImGui::Checkbox("Draw Earth", &scattering.m_drawEarth);
         
         if (ImGui::Button("Reset Camera")) {
-            m_cam_pos = vec2(0.f, -scattering.radius_earth+0.4);
+            m_cam_pos = vec2(0.f, scattering.radius_earth);
             m_pitch = 0.00;
             m_yaw = -1.55;
             m_distance = 20;
@@ -350,11 +346,11 @@ void Application::renderGUI() {
         if (ImGui::Button("Reset Coefficients")) {
             scattering.viewSamples = 16;
             scattering.lightSamples = 8;
-            scattering.radius_atmosphere = 6420.;
-            scattering.radius_earth = 6360.;
+            scattering.radius_atmosphere = 6390.;
+            scattering.radius_earth = 6359.;
             scattering.H_R = 7.994;
             scattering.H_M = 1.200;
-            scattering.g = 0.888;
+            scattering.g = 0.980;
             scattering.beta_M = 21e-3f;
             scattering.beta_R = glm::vec3(5.8e-3f, 13.5e-3f, 33.1e-3f);
             scattering. m_viewPos = glm::vec3(0.0, 6360.0-0.4, 0.0);

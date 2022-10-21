@@ -11,8 +11,13 @@ float waveSpectrumBase(float w){
 	return (0.0081 * 9.81 * 9.18)/pow(w,5);
 }
 
-float peakFrequency() {
-	return (0.855*9.81)/5;
+
+float PiersonMoskowtiz_wp(float w){
+	return (0.855*uGravity)/uWindSpeed;
+}
+
+float PiersonMoskowtiz(float w){
+	return waveSpectrumBase(w)*exp(-(5/4) * pow((PiersonMoskowtiz_wp(w)/w),4));
 }
 
 float JONSWAP_wp(){
@@ -32,16 +37,16 @@ float JONSWAP_sigma(float w) {
 	return 0.09;
 }
 
-
 float JONSWAP(float w,float R) {
 	float sigma = JONSWAP_sigma(w);
-	return waveSpectrumBase(w)*pow(0,JONSWAP_r(w,sigma));
+	//return waveSpectrumBase(w)*pow(R,JONSWAP_r(w,sigma));
+	return PiersonMoskowtiz(w)*pow(R,JONSWAP_r(w,sigma));
+
 }
 
 float calculateAmplitude(float w) {
 	return (0.076 * pow((uWindSpeed*uWindSpeed)/(uOceanFetch*uGravity),0.22))*w * JONSWAP(w,3.3);
 }
-
 
 float pico (float w) {
 	float wp = JONSWAP_wp();
@@ -79,10 +84,10 @@ vec3 wave(float amp, float wL, vec2 dir, vec3 position, float speed, float chopp
 	dir += calculateDirection(rand(dir));
 
 
-	choppiness = sharpnessFactor(choppiness) * 10;
+	//choppiness = sharpnessFactor(choppiness) * 10;
 	//choppiness = 0;
 
-	choppiness = choppiness * uChoppiness;
+	//choppiness = choppiness * uChoppiness;
 	if(choppiness > 1) {
 		choppiness = 1;
 	}
@@ -100,7 +105,7 @@ vec3 wave(float amp, float wL, vec2 dir, vec3 position, float speed, float chopp
 	float f = k * (dot(dir, position.xz) - c * uTime * uOceanSpeed * speed);
 
 	float x = position.x + dir.x * (a * cos(f));
-	float y = (a+amp) * sin (f);
+	float y = (a*(amp*10)) * sin (f);
 	float z = position.z + dir.y * (a * cos(f));
 
 	return vec3(x,y * uAmplitude,z);
@@ -109,25 +114,25 @@ vec3 wave(float amp, float wL, vec2 dir, vec3 position, float speed, float chopp
 vec3 waves(int iterations, vec3 position) {
 	vec3 gerstnerWave = vec3(0);
 
-	float amp = JONSWAP(position.x+position.y,7);
+	float amp = JONSWAP(position.x+position.y,3.3);
 	float waveLen = 5;
 	float waveSpe = 0.5;
 
 	for (int i = uWaveNumber; i > 0; i --) {
 
 		float seed_wave = rand(vec2(uWaveSeed * i * 20 +0.2 + amp * 20, i*i * 34 +0.6 + amp * 20)) * 100 + 0.1 ;
-		float amplitude_wave = calculateAmplitude(seed_wave) * amp * 10;
+		float amplitude_wave = calculateAmplitude(seed_wave)*10*amp;
 	
 		float length_wave = waveLen * uWaveLength + 0.1;
 		vec2  direction_wave = dispersionRelation(seed_wave);
 		float speed_wave = waveSpe + (uWindSpeed/10) + 0.1;
-		float sharpness_wave = 1;
+		float sharpness_wave = uChoppiness;
 
 		gerstnerWave += wave(amplitude_wave*100, length_wave, direction_wave, position, speed_wave, sharpness_wave);
 		
-		amp *= 0.7;
+		amp *= 0.8;
 		waveLen *= 0.9;
-		waveSpe *= 0.85;
+		waveSpe *= 0.95;
 	}
 	gerstnerWave.xz /= uWaveNumber;
 

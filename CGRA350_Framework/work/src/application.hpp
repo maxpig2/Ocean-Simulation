@@ -27,8 +27,8 @@ struct basic_model {
 	glm::vec2 windDirection{0,1};
 	GLfloat gravity = 9.81;
 	GLfloat seed = 1.4872;
-	GLint waveNumber = 10;
-	GLfloat oceanFetch = 10;
+	GLint waveNumber = 15;
+	GLfloat oceanFetch = 5;
 	GLfloat windSpeed = 10;
 	GLfloat choppiness = 0.5;
 	GLfloat oceanSpeed = 10;
@@ -52,8 +52,8 @@ private:
 	GLFWwindow *m_window;
 
 	// oribital camera
-	float m_pitch = .86;
-	float m_yaw = -.86;
+	float m_pitch = 0.00;
+	float m_yaw = -1.55;
 	float m_distance = 20;
 	glm::vec2 m_cam_pos;
 
@@ -79,8 +79,6 @@ private:
 	GLuint m_texture;
 	GLuint m_normal;
 
-	//Camera
-	vec3 c_atmosphere = vec3(0,0,0); 
 
 public:
 	// setup
