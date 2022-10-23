@@ -1,0 +1,147 @@
+[
+{
+  "directory": "/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/ext/glfw/src",
+  "command": "/usr/bin/clang -D_GLFW_USE_CONFIG_H -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glfw/src -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/ext/glfw/src -g -fPIC   -Wall -o CMakeFiles/glfw.dir/context.c.o -c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glfw/src/context.c",
+  "file": "/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glfw/src/context.c"
+},
+{
+  "directory": "/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/ext/glfw/src",
+  "command": "/usr/bin/clang -D_GLFW_USE_CONFIG_H -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glfw/src -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/ext/glfw/src -g -fPIC   -Wall -o CMakeFiles/glfw.dir/init.c.o -c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glfw/src/init.c",
+  "file": "/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glfw/src/init.c"
+},
+{
+  "directory": "/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/ext/glfw/src",
+  "command": "/usr/bin/clang -D_GLFW_USE_CONFIG_H -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glfw/src -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/ext/glfw/src -g -fPIC   -Wall -o CMakeFiles/glfw.dir/input.c.o -c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glfw/src/input.c",
+  "file": "/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glfw/src/input.c"
+},
+{
+  "directory": "/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/ext/glfw/src",
+  "command": "/usr/bin/clang -D_GLFW_USE_CONFIG_H -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glfw/src -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/ext/glfw/src -g -fPIC   -Wall -o CMakeFiles/glfw.dir/monitor.c.o -c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glfw/src/monitor.c",
+  "file": "/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glfw/src/monitor.c"
+},
+{
+  "directory": "/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/ext/glfw/src",
+  "command": "/usr/bin/clang -D_GLFW_USE_CONFIG_H -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glfw/src -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/ext/glfw/src -g -fPIC   -Wall -o CMakeFiles/glfw.dir/window.c.o -c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glfw/src/window.c",
+  "file": "/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glfw/src/window.c"
+},
+{
+  "directory": "/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/ext/glfw/src",
+  "command": "/usr/bin/clang -D_GLFW_USE_CONFIG_H -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glfw/src -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/ext/glfw/src -g -fPIC   -Wall -o CMakeFiles/glfw.dir/x11_init.c.o -c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glfw/src/x11_init.c",
+  "file": "/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glfw/src/x11_init.c"
+},
+{
+  "directory": "/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/ext/glfw/src",
+  "command": "/usr/bin/clang -D_GLFW_USE_CONFIG_H -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glfw/src -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/ext/glfw/src -g -fPIC   -Wall -o CMakeFiles/glfw.dir/x11_monitor.c.o -c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glfw/src/x11_monitor.c",
+  "file": "/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glfw/src/x11_monitor.c"
+},
+{
+  "directory": "/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/ext/glfw/src",
+  "command": "/usr/bin/clang -D_GLFW_USE_CONFIG_H -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glfw/src -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/ext/glfw/src -g -fPIC   -Wall -o CMakeFiles/glfw.dir/x11_window.c.o -c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glfw/src/x11_window.c",
+  "file": "/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glfw/src/x11_window.c"
+},
+{
+  "directory": "/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/ext/glfw/src",
+  "command": "/usr/bin/clang -D_GLFW_USE_CONFIG_H -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glfw/src -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/ext/glfw/src -g -fPIC   -Wall -o CMakeFiles/glfw.dir/xkb_unicode.c.o -c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glfw/src/xkb_unicode.c",
+  "file": "/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glfw/src/xkb_unicode.c"
+},
+{
+  "directory": "/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/ext/glfw/src",
+  "command": "/usr/bin/clang -D_GLFW_USE_CONFIG_H -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glfw/src -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/ext/glfw/src -g -fPIC   -Wall -o CMakeFiles/glfw.dir/linux_joystick.c.o -c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glfw/src/linux_joystick.c",
+  "file": "/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glfw/src/linux_joystick.c"
+},
+{
+  "directory": "/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/ext/glfw/src",
+  "command": "/usr/bin/clang -D_GLFW_USE_CONFIG_H -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glfw/src -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/ext/glfw/src -g -fPIC   -Wall -o CMakeFiles/glfw.dir/posix_time.c.o -c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glfw/src/posix_time.c",
+  "file": "/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glfw/src/posix_time.c"
+},
+{
+  "directory": "/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/ext/glfw/src",
+  "command": "/usr/bin/clang -D_GLFW_USE_CONFIG_H -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glfw/src -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/ext/glfw/src -g -fPIC   -Wall -o CMakeFiles/glfw.dir/posix_tls.c.o -c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glfw/src/posix_tls.c",
+  "file": "/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glfw/src/posix_tls.c"
+},
+{
+  "directory": "/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/ext/glfw/src",
+  "command": "/usr/bin/clang -D_GLFW_USE_CONFIG_H -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glfw/src -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/ext/glfw/src -g -fPIC   -Wall -o CMakeFiles/glfw.dir/glx_context.c.o -c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glfw/src/glx_context.c",
+  "file": "/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glfw/src/glx_context.c"
+},
+{
+  "directory": "/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/ext/glew-1.10.0",
+  "command": "/usr/bin/clang -DGLEW_STATIC -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glfw/include -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glew-1.10.0/include -g -o CMakeFiles/glew.dir/src/glew.c.o -c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glew-1.10.0/src/glew.c",
+  "file": "/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glew-1.10.0/src/glew.c"
+},
+{
+  "directory": "/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/ext/stb",
+  "command": "/usr/bin/clang  -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glfw/include -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/stb -g -o CMakeFiles/stb.dir/stb.c.o -c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/stb/stb.c",
+  "file": "/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/stb/stb.c"
+},
+{
+  "directory": "/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/ext/imgui",
+  "command": "/usr/bin/clang++  -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glfw/include -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/imgui -g -o CMakeFiles/imgui.dir/imgui.cpp.o -c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/imgui/imgui.cpp",
+  "file": "/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/imgui/imgui.cpp"
+},
+{
+  "directory": "/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/ext/imgui",
+  "command": "/usr/bin/clang++  -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glfw/include -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/imgui -g -o CMakeFiles/imgui.dir/imgui_demo.cpp.o -c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/imgui/imgui_demo.cpp",
+  "file": "/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/imgui/imgui_demo.cpp"
+},
+{
+  "directory": "/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/ext/imgui",
+  "command": "/usr/bin/clang++  -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glfw/include -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/imgui -g -o CMakeFiles/imgui.dir/imgui_draw.cpp.o -c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/imgui/imgui_draw.cpp",
+  "file": "/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/imgui/imgui_draw.cpp"
+},
+{
+  "directory": "/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/ext/glm",
+  "command": "/usr/bin/clang++  -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glfw/include -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glm/.. -g -o CMakeFiles/glm_dummy.dir/detail/dummy.cpp.o -c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glm/detail/dummy.cpp",
+  "file": "/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glm/detail/dummy.cpp"
+},
+{
+  "directory": "/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/ext/glm",
+  "command": "/usr/bin/clang++  -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glfw/include -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glm/.. -g -o CMakeFiles/glm_dummy.dir/detail/glm.cpp.o -c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glm/detail/glm.cpp",
+  "file": "/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glm/detail/glm.cpp"
+},
+{
+  "directory": "/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/src",
+  "command": "/usr/bin/clang++ -DCGRA_SRCDIR=\\\"/home/max/VUW/Cgra350/Project/CGRA350_Framework/work\\\" -DGLEW_STATIC -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glfw/include -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/src -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glew-1.10.0/include -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/stb -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/imgui -g -std=c++1z -Wall -Wextra -pedantic -fvisibility=hidden -pthread -msse2 -Werror=return-type -o CMakeFiles/base.dir/application.cpp.o -c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/src/application.cpp",
+  "file": "/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/src/application.cpp"
+},
+{
+  "directory": "/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/src",
+  "command": "/usr/bin/clang++ -DCGRA_SRCDIR=\\\"/home/max/VUW/Cgra350/Project/CGRA350_Framework/work\\\" -DGLEW_STATIC -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glfw/include -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/src -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glew-1.10.0/include -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/stb -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/imgui -g -std=c++1z -Wall -Wextra -pedantic -fvisibility=hidden -pthread -msse2 -Werror=return-type -o CMakeFiles/base.dir/atmoshericScattering.cpp.o -c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/src/atmoshericScattering.cpp",
+  "file": "/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/src/atmoshericScattering.cpp"
+},
+{
+  "directory": "/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/src",
+  "command": "/usr/bin/clang++ -DCGRA_SRCDIR=\\\"/home/max/VUW/Cgra350/Project/CGRA350_Framework/work\\\" -DGLEW_STATIC -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glfw/include -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/src -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glew-1.10.0/include -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/stb -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/imgui -g -std=c++1z -Wall -Wextra -pedantic -fvisibility=hidden -pthread -msse2 -Werror=return-type -o CMakeFiles/base.dir/main.cpp.o -c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/src/main.cpp",
+  "file": "/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/src/main.cpp"
+},
+{
+  "directory": "/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/src",
+  "command": "/usr/bin/clang++ -DCGRA_SRCDIR=\\\"/home/max/VUW/Cgra350/Project/CGRA350_Framework/work\\\" -DGLEW_STATIC -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glfw/include -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/src -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glew-1.10.0/include -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/stb -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/imgui -g -std=c++1z -Wall -Wextra -pedantic -fvisibility=hidden -pthread -msse2 -Werror=return-type -o CMakeFiles/base.dir/skeleton.cpp.o -c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/src/skeleton.cpp",
+  "file": "/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/src/skeleton.cpp"
+},
+{
+  "directory": "/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/src",
+  "command": "/usr/bin/clang++ -DCGRA_SRCDIR=\\\"/home/max/VUW/Cgra350/Project/CGRA350_Framework/work\\\" -DGLEW_STATIC -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glfw/include -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/src -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glew-1.10.0/include -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/stb -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/imgui -g -std=c++1z -Wall -Wextra -pedantic -fvisibility=hidden -pthread -msse2 -Werror=return-type -o CMakeFiles/base.dir/skeleton_model.cpp.o -c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/src/skeleton_model.cpp",
+  "file": "/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/src/skeleton_model.cpp"
+},
+{
+  "directory": "/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/src",
+  "command": "/usr/bin/clang++ -DCGRA_SRCDIR=\\\"/home/max/VUW/Cgra350/Project/CGRA350_Framework/work\\\" -DGLEW_STATIC -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glfw/include -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/src -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glew-1.10.0/include -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/stb -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/imgui -g -std=c++1z -Wall -Wextra -pedantic -fvisibility=hidden -pthread -msse2 -Werror=return-type -o CMakeFiles/base.dir/cgra/cgra_geometry.cpp.o -c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/src/cgra/cgra_geometry.cpp",
+  "file": "/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/src/cgra/cgra_geometry.cpp"
+},
+{
+  "directory": "/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/src",
+  "command": "/usr/bin/clang++ -DCGRA_SRCDIR=\\\"/home/max/VUW/Cgra350/Project/CGRA350_Framework/work\\\" -DGLEW_STATIC -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glfw/include -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/src -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glew-1.10.0/include -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/stb -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/imgui -g -std=c++1z -Wall -Wextra -pedantic -fvisibility=hidden -pthread -msse2 -Werror=return-type -o CMakeFiles/base.dir/cgra/cgra_gui.cpp.o -c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/src/cgra/cgra_gui.cpp",
+  "file": "/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/src/cgra/cgra_gui.cpp"
+},
+{
+  "directory": "/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/src",
+  "command": "/usr/bin/clang++ -DCGRA_SRCDIR=\\\"/home/max/VUW/Cgra350/Project/CGRA350_Framework/work\\\" -DGLEW_STATIC -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glfw/include -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/src -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glew-1.10.0/include -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/stb -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/imgui -g -std=c++1z -Wall -Wextra -pedantic -fvisibility=hidden -pthread -msse2 -Werror=return-type -o CMakeFiles/base.dir/cgra/cgra_mesh.cpp.o -c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/src/cgra/cgra_mesh.cpp",
+  "file": "/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/src/cgra/cgra_mesh.cpp"
+},
+{
+  "directory": "/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/src",
+  "command": "/usr/bin/clang++ -DCGRA_SRCDIR=\\\"/home/max/VUW/Cgra350/Project/CGRA350_Framework/work\\\" -DGLEW_STATIC -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glfw/include -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/src -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/glew-1.10.0/include -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/stb -I/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/ext/imgui -g -std=c++1z -Wall -Wextra -pedantic -fvisibility=hidden -pthread -msse2 -Werror=return-type -o CMakeFiles/base.dir/cgra/cgra_shader.cpp.o -c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/src/cgra/cgra_shader.cpp",
+  "file": "/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/src/cgra/cgra_shader.cpp"
+}
+]

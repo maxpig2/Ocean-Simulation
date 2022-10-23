@@ -1,0 +1,298 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						3,
+						4,
+						5,
+						6,
+						7,
+						9
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "ext/glfw",
+					"childIndexes" : 
+					[
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-ext.glfw-Debug-0d77785c3d1a0d2b4911.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8.9"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "ext/glfw",
+					"targetIndexes" : 
+					[
+						7
+					]
+				},
+				{
+					"build" : "ext/glfw/src",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-ext.glfw.src-Debug-fdfbddb1f6bff6f61a6d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8.9"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "ext/glfw/src",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "ext/glew-1.10.0",
+					"jsonFile" : "directory-ext.glew-1.10.0-Debug-4aa2971e33be78871576.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "ext/glew-1.10.0",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "ext/stb",
+					"jsonFile" : "directory-ext.stb-Debug-996a0e76ea3d25902874.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "ext/stb",
+					"targetIndexes" : 
+					[
+						6
+					]
+				},
+				{
+					"build" : "ext/imgui",
+					"jsonFile" : "directory-ext.imgui-Debug-16faefa5e7bc5f1696b1.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "ext/imgui",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "ext/glm",
+					"jsonFile" : "directory-ext.glm-Debug-701ed8d54251f29d3c48.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "ext/glm",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "src",
+					"childIndexes" : 
+					[
+						8
+					],
+					"jsonFile" : "directory-src-Debug-b6cf2213fc5053b67c22.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "src/cgra",
+					"jsonFile" : "directory-src.cgra-Debug-55b8c88482bfc248406c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 7,
+					"projectIndex" : 0,
+					"source" : "src/cgra"
+				},
+				{
+					"build" : "res",
+					"jsonFile" : "directory-res-Debug-fb1fc3c2ba134780ca15.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "res",
+					"targetIndexes" : 
+					[
+						5
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9
+					],
+					"name" : "CGRA_PROJECT_base",
+					"targetIndexes" : 
+					[
+						0,
+						3,
+						4,
+						5,
+						6
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1,
+						2
+					],
+					"name" : "GLFW",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						2,
+						7
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "GLEW",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 7,
+					"id" : "base::@145eef247bfb46b6828c",
+					"jsonFile" : "target-base-Debug-2f8f772492832126c96d.json",
+					"name" : "base",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "glew::@f5d9d1e8851fb1696c24",
+					"jsonFile" : "target-glew-Debug-783eda4216703f2c628e.json",
+					"name" : "glew",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "glfw::@f6f7721c76705297a9b5",
+					"jsonFile" : "target-glfw-Debug-f93d17912744e04bcfb7.json",
+					"name" : "glfw",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "glm_dummy::@4e4d9b34f8f0d8d86c78",
+					"jsonFile" : "target-glm_dummy-Debug-9e71d259498a42cf247a.json",
+					"name" : "glm_dummy",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "imgui::@b74f06831d21e0dfde8d",
+					"jsonFile" : "target-imgui-Debug-d28e2eac3d32634fe34c.json",
+					"name" : "imgui",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "res::@a6dcd4b96501b4d6d326",
+					"jsonFile" : "target-res-Debug-ade15903d3edaec29680.json",
+					"name" : "res",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "stb::@6ca9cafc53226d3f9bad",
+					"jsonFile" : "target-stb-Debug-ec657badb45a7295ad34.json",
+					"name" : "stb",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "uninstall::@5c095e04c8d0b36bd90a",
+					"jsonFile" : "target-uninstall-Debug-845b51c2bb9746893c38.json",
+					"name" : "uninstall",
+					"projectIndex" : 1
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build",
+		"source" : "/home/max/VUW/Cgra350/Project/CGRA350_Framework/work"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

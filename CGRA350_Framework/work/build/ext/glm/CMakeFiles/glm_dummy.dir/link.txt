@@ -1,0 +1,1 @@
+/usr/bin/clang++ -g -rdynamic CMakeFiles/glm_dummy.dir/detail/dummy.cpp.o CMakeFiles/glm_dummy.dir/detail/glm.cpp.o -o ../../bin/glm_dummy 

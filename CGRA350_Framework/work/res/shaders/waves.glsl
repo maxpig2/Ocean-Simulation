@@ -84,10 +84,9 @@ vec3 wave(float amp, float wL, vec2 dir, vec3 position, float speed, float chopp
 	dir += calculateDirection(rand(dir));
 
 
-	//choppiness = sharpnessFactor(choppiness) * 10;
-	//choppiness = 0;
+	choppiness = sharpnessFactor(choppiness) * 5;
 
-	//choppiness = choppiness * uChoppiness;
+	choppiness = choppiness * uChoppiness;
 	if(choppiness > 1) {
 		choppiness = 1;
 	}
@@ -105,7 +104,7 @@ vec3 wave(float amp, float wL, vec2 dir, vec3 position, float speed, float chopp
 	float f = k * (dot(dir, position.xz) - c * uTime * uOceanSpeed * speed);
 
 	float x = position.x + dir.x * (a * cos(f));
-	float y = (a*(amp*10)) * sin (f);
+	float y = (a+amp) * sin (f);
 	float z = position.z + dir.y * (a * cos(f));
 
 	return vec3(x,y * uAmplitude,z);
@@ -114,25 +113,25 @@ vec3 wave(float amp, float wL, vec2 dir, vec3 position, float speed, float chopp
 vec3 waves(int iterations, vec3 position) {
 	vec3 gerstnerWave = vec3(0);
 
-	float amp = JONSWAP(position.x+position.y,3.3);
+	float amp = JONSWAP(position.x+position.y+uTime,7);
 	float waveLen = 5;
 	float waveSpe = 0.5;
 
 	for (int i = uWaveNumber; i > 0; i --) {
 
 		float seed_wave = rand(vec2(uWaveSeed * i * 20 +0.2 + amp * 20, i*i * 34 +0.6 + amp * 20)) * 100 + 0.1 ;
-		float amplitude_wave = calculateAmplitude(seed_wave)*10*amp;
+		float amplitude_wave = calculateAmplitude(seed_wave) * amp * 10;
 	
 		float length_wave = waveLen * uWaveLength + 0.1;
 		vec2  direction_wave = dispersionRelation(seed_wave);
 		float speed_wave = waveSpe + (uWindSpeed/10) + 0.1;
-		float sharpness_wave = uChoppiness;
+		float sharpness_wave = 1;
 
 		gerstnerWave += wave(amplitude_wave*100, length_wave, direction_wave, position, speed_wave, sharpness_wave);
 		
 		amp *= 0.8;
 		waveLen *= 0.9;
-		waveSpe *= 0.95;
+		waveSpe *= 1.1;
 	}
 	gerstnerWave.xz /= uWaveNumber;
 

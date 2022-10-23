@@ -1,0 +1,943 @@
+Detecting C OpenMP failed with the following output:
+Change Dir: /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_9a26d/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_9a26d.dir/build.make CMakeFiles/cmTC_9a26d.dir/build
+gmake[1]: Entering directory '/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9a26d.dir/OpenMPTryFlag.c.o
+/usr/bin/clang   -fopenmp=libomp -v -MD -MT CMakeFiles/cmTC_9a26d.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_9a26d.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_9a26d.dir/OpenMPTryFlag.c.o -c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c
+Ubuntu clang version 14.0.0-1ubuntu1
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ (in-process)
+ "/usr/lib/llvm-14/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp -resource-dir /usr/lib/llvm-14/lib/clang/14.0.0 -dependency-file CMakeFiles/cmTC_9a26d.dir/OpenMPTryFlag.c.o.d -MT CMakeFiles/cmTC_9a26d.dir/OpenMPTryFlag.c.o -sys-header-deps -internal-isystem /usr/lib/llvm-14/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir=/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fopenmp -fopenmp-target-new-runtime -fgnuc-version=4.2.1 -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_9a26d.dir/OpenMPTryFlag.c.o -x c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c
+clang -cc1 version 14.0.0 based upon LLVM 14.0.0 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/lib/llvm-14/lib/clang/14.0.0/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+#include <omp.h>
+         ^~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_9a26d.dir/build.make:79: CMakeFiles/cmTC_9a26d.dir/OpenMPTryFlag.c.o] Error 1
+gmake[1]: Leaving directory '/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_9a26d/fast] Error 2
+
+
+
+Detecting C OpenMP failed with the following output:
+Change Dir: /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_390a5/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_390a5.dir/build.make CMakeFiles/cmTC_390a5.dir/build
+gmake[1]: Entering directory '/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_390a5.dir/OpenMPTryFlag.c.o
+/usr/bin/clang   -fopenmp=libiomp5 -v -MD -MT CMakeFiles/cmTC_390a5.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_390a5.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_390a5.dir/OpenMPTryFlag.c.o -c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c
+Ubuntu clang version 14.0.0-1ubuntu1
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ (in-process)
+ "/usr/lib/llvm-14/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp -resource-dir /usr/lib/llvm-14/lib/clang/14.0.0 -dependency-file CMakeFiles/cmTC_390a5.dir/OpenMPTryFlag.c.o.d -MT CMakeFiles/cmTC_390a5.dir/OpenMPTryFlag.c.o -sys-header-deps -internal-isystem /usr/lib/llvm-14/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir=/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fopenmp -fopenmp-target-new-runtime -fgnuc-version=4.2.1 -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_390a5.dir/OpenMPTryFlag.c.o -x c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c
+clang -cc1 version 14.0.0 based upon LLVM 14.0.0 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/lib/llvm-14/lib/clang/14.0.0/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+#include <omp.h>
+         ^~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_390a5.dir/build.make:79: CMakeFiles/cmTC_390a5.dir/OpenMPTryFlag.c.o] Error 1
+gmake[1]: Leaving directory '/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_390a5/fast] Error 2
+
+
+
+Detecting C OpenMP failed with the following output:
+Change Dir: /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_0fa89/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_0fa89.dir/build.make CMakeFiles/cmTC_0fa89.dir/build
+gmake[1]: Entering directory '/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0fa89.dir/OpenMPTryFlag.c.o
+/usr/bin/clang   -fopenmp -v -MD -MT CMakeFiles/cmTC_0fa89.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_0fa89.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_0fa89.dir/OpenMPTryFlag.c.o -c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c
+Ubuntu clang version 14.0.0-1ubuntu1
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ (in-process)
+ "/usr/lib/llvm-14/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp -resource-dir /usr/lib/llvm-14/lib/clang/14.0.0 -dependency-file CMakeFiles/cmTC_0fa89.dir/OpenMPTryFlag.c.o.d -MT CMakeFiles/cmTC_0fa89.dir/OpenMPTryFlag.c.o -sys-header-deps -internal-isystem /usr/lib/llvm-14/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir=/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fopenmp -fopenmp-target-new-runtime -fgnuc-version=4.2.1 -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_0fa89.dir/OpenMPTryFlag.c.o -x c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c
+clang -cc1 version 14.0.0 based upon LLVM 14.0.0 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/lib/llvm-14/lib/clang/14.0.0/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+#include <omp.h>
+         ^~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_0fa89.dir/build.make:79: CMakeFiles/cmTC_0fa89.dir/OpenMPTryFlag.c.o] Error 1
+gmake[1]: Leaving directory '/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_0fa89/fast] Error 2
+
+
+
+Detecting C OpenMP failed with the following output:
+Change Dir: /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_a8b98/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_a8b98.dir/build.make CMakeFiles/cmTC_a8b98.dir/build
+gmake[1]: Entering directory '/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a8b98.dir/OpenMPTryFlag.c.o
+/usr/bin/clang   -Xclang -fopenmp -v -MD -MT CMakeFiles/cmTC_a8b98.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_a8b98.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_a8b98.dir/OpenMPTryFlag.c.o -c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c
+Ubuntu clang version 14.0.0-1ubuntu1
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ (in-process)
+ "/usr/lib/llvm-14/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp -resource-dir /usr/lib/llvm-14/lib/clang/14.0.0 -dependency-file CMakeFiles/cmTC_a8b98.dir/OpenMPTryFlag.c.o.d -MT CMakeFiles/cmTC_a8b98.dir/OpenMPTryFlag.c.o -sys-header-deps -internal-isystem /usr/lib/llvm-14/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir=/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fgnuc-version=4.2.1 -fopenmp -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_a8b98.dir/OpenMPTryFlag.c.o -x c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c
+clang -cc1 version 14.0.0 based upon LLVM 14.0.0 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/lib/llvm-14/lib/clang/14.0.0/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+#include <omp.h>
+         ^~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_a8b98.dir/build.make:79: CMakeFiles/cmTC_a8b98.dir/OpenMPTryFlag.c.o] Error 1
+gmake[1]: Leaving directory '/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_a8b98/fast] Error 2
+
+
+
+Detecting CXX OpenMP failed with the following output:
+Change Dir: /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_72c3a/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_72c3a.dir/build.make CMakeFiles/cmTC_72c3a.dir/build
+gmake[1]: Entering directory '/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_72c3a.dir/OpenMPTryFlag.cpp.o
+/usr/bin/clang++   -fopenmp=libomp -v -MD -MT CMakeFiles/cmTC_72c3a.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_72c3a.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_72c3a.dir/OpenMPTryFlag.cpp.o -c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
+Ubuntu clang version 14.0.0-1ubuntu1
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ (in-process)
+ "/usr/lib/llvm-14/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp -resource-dir /usr/lib/llvm-14/lib/clang/14.0.0 -dependency-file CMakeFiles/cmTC_72c3a.dir/OpenMPTryFlag.cpp.o.d -MT CMakeFiles/cmTC_72c3a.dir/OpenMPTryFlag.cpp.o -sys-header-deps -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/backward -internal-isystem /usr/lib/llvm-14/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir=/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fopenmp -fopenmp-target-new-runtime -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_72c3a.dir/OpenMPTryFlag.cpp.o -x c++ /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
+clang -cc1 version 14.0.0 based upon LLVM 14.0.0 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/backward
+ /usr/lib/llvm-14/lib/clang/14.0.0/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+#include <omp.h>
+         ^~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_72c3a.dir/build.make:79: CMakeFiles/cmTC_72c3a.dir/OpenMPTryFlag.cpp.o] Error 1
+gmake[1]: Leaving directory '/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_72c3a/fast] Error 2
+
+
+
+Detecting CXX OpenMP failed with the following output:
+Change Dir: /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_41863/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_41863.dir/build.make CMakeFiles/cmTC_41863.dir/build
+gmake[1]: Entering directory '/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_41863.dir/OpenMPTryFlag.cpp.o
+/usr/bin/clang++   -fopenmp=libiomp5 -v -MD -MT CMakeFiles/cmTC_41863.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_41863.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_41863.dir/OpenMPTryFlag.cpp.o -c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
+Ubuntu clang version 14.0.0-1ubuntu1
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ (in-process)
+ "/usr/lib/llvm-14/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp -resource-dir /usr/lib/llvm-14/lib/clang/14.0.0 -dependency-file CMakeFiles/cmTC_41863.dir/OpenMPTryFlag.cpp.o.d -MT CMakeFiles/cmTC_41863.dir/OpenMPTryFlag.cpp.o -sys-header-deps -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/backward -internal-isystem /usr/lib/llvm-14/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir=/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fopenmp -fopenmp-target-new-runtime -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_41863.dir/OpenMPTryFlag.cpp.o -x c++ /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
+clang -cc1 version 14.0.0 based upon LLVM 14.0.0 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/backward
+ /usr/lib/llvm-14/lib/clang/14.0.0/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+#include <omp.h>
+         ^~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_41863.dir/build.make:79: CMakeFiles/cmTC_41863.dir/OpenMPTryFlag.cpp.o] Error 1
+gmake[1]: Leaving directory '/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_41863/fast] Error 2
+
+
+
+Detecting CXX OpenMP failed with the following output:
+Change Dir: /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_56b80/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_56b80.dir/build.make CMakeFiles/cmTC_56b80.dir/build
+gmake[1]: Entering directory '/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_56b80.dir/OpenMPTryFlag.cpp.o
+/usr/bin/clang++   -fopenmp -v -MD -MT CMakeFiles/cmTC_56b80.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_56b80.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_56b80.dir/OpenMPTryFlag.cpp.o -c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
+Ubuntu clang version 14.0.0-1ubuntu1
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ (in-process)
+ "/usr/lib/llvm-14/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp -resource-dir /usr/lib/llvm-14/lib/clang/14.0.0 -dependency-file CMakeFiles/cmTC_56b80.dir/OpenMPTryFlag.cpp.o.d -MT CMakeFiles/cmTC_56b80.dir/OpenMPTryFlag.cpp.o -sys-header-deps -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/backward -internal-isystem /usr/lib/llvm-14/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir=/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fopenmp -fopenmp-target-new-runtime -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_56b80.dir/OpenMPTryFlag.cpp.o -x c++ /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
+clang -cc1 version 14.0.0 based upon LLVM 14.0.0 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/backward
+ /usr/lib/llvm-14/lib/clang/14.0.0/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+#include <omp.h>
+         ^~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_56b80.dir/build.make:79: CMakeFiles/cmTC_56b80.dir/OpenMPTryFlag.cpp.o] Error 1
+gmake[1]: Leaving directory '/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_56b80/fast] Error 2
+
+
+
+Detecting CXX OpenMP failed with the following output:
+Change Dir: /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_d9f85/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_d9f85.dir/build.make CMakeFiles/cmTC_d9f85.dir/build
+gmake[1]: Entering directory '/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_d9f85.dir/OpenMPTryFlag.cpp.o
+/usr/bin/clang++   -Xclang -fopenmp -v -MD -MT CMakeFiles/cmTC_d9f85.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_d9f85.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_d9f85.dir/OpenMPTryFlag.cpp.o -c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
+Ubuntu clang version 14.0.0-1ubuntu1
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ (in-process)
+ "/usr/lib/llvm-14/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp -resource-dir /usr/lib/llvm-14/lib/clang/14.0.0 -dependency-file CMakeFiles/cmTC_d9f85.dir/OpenMPTryFlag.cpp.o.d -MT CMakeFiles/cmTC_d9f85.dir/OpenMPTryFlag.cpp.o -sys-header-deps -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/backward -internal-isystem /usr/lib/llvm-14/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir=/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -fopenmp -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_d9f85.dir/OpenMPTryFlag.cpp.o -x c++ /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
+clang -cc1 version 14.0.0 based upon LLVM 14.0.0 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/backward
+ /usr/lib/llvm-14/lib/clang/14.0.0/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+#include <omp.h>
+         ^~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_d9f85.dir/build.make:79: CMakeFiles/cmTC_d9f85.dir/OpenMPTryFlag.cpp.o] Error 1
+gmake[1]: Leaving directory '/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_d9f85/fast] Error 2
+
+
+
+Determining if the function glXGetProcAddressEXT exists failed with the following output:
+Change Dir: /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_38b90/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_38b90.dir/build.make CMakeFiles/cmTC_38b90.dir/build
+gmake[1]: Entering directory '/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_38b90.dir/CheckFunctionExists.c.o
+/usr/bin/clang   -DCHECK_FUNCTION_EXISTS=glXGetProcAddressEXT -MD -MT CMakeFiles/cmTC_38b90.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_38b90.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_38b90.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_38b90
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_38b90.dir/link.txt --verbose=1
+/usr/bin/clang  -DCHECK_FUNCTION_EXISTS=glXGetProcAddressEXT -rdynamic CMakeFiles/cmTC_38b90.dir/CheckFunctionExists.c.o -o cmTC_38b90  /usr/lib/x86_64-linux-gnu/libGL.so 
+/usr/bin/ld: CMakeFiles/cmTC_38b90.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x17): undefined reference to `glXGetProcAddressEXT'
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+gmake[1]: *** [CMakeFiles/cmTC_38b90.dir/build.make:101: cmTC_38b90] Error 1
+gmake[1]: Leaving directory '/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_38b90/fast] Error 2
+
+
+
+Detecting C OpenMP failed with the following output:
+Change Dir: /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_bf374/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_bf374.dir/build.make CMakeFiles/cmTC_bf374.dir/build
+gmake[1]: Entering directory '/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_bf374.dir/OpenMPTryFlag.c.o
+/usr/bin/clang   -fopenmp=libomp -v -MD -MT CMakeFiles/cmTC_bf374.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_bf374.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_bf374.dir/OpenMPTryFlag.c.o -c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c
+Ubuntu clang version 14.0.0-1ubuntu1
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ (in-process)
+ "/usr/lib/llvm-14/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp -resource-dir /usr/lib/llvm-14/lib/clang/14.0.0 -dependency-file CMakeFiles/cmTC_bf374.dir/OpenMPTryFlag.c.o.d -MT CMakeFiles/cmTC_bf374.dir/OpenMPTryFlag.c.o -sys-header-deps -internal-isystem /usr/lib/llvm-14/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir=/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fopenmp -fopenmp-target-new-runtime -fgnuc-version=4.2.1 -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_bf374.dir/OpenMPTryFlag.c.o -x c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c
+clang -cc1 version 14.0.0 based upon LLVM 14.0.0 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/lib/llvm-14/lib/clang/14.0.0/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+#include <omp.h>
+         ^~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_bf374.dir/build.make:79: CMakeFiles/cmTC_bf374.dir/OpenMPTryFlag.c.o] Error 1
+gmake[1]: Leaving directory '/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_bf374/fast] Error 2
+
+
+
+Detecting C OpenMP failed with the following output:
+Change Dir: /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_375ec/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_375ec.dir/build.make CMakeFiles/cmTC_375ec.dir/build
+gmake[1]: Entering directory '/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_375ec.dir/OpenMPTryFlag.c.o
+/usr/bin/clang   -fopenmp=libiomp5 -v -MD -MT CMakeFiles/cmTC_375ec.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_375ec.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_375ec.dir/OpenMPTryFlag.c.o -c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c
+Ubuntu clang version 14.0.0-1ubuntu1
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ (in-process)
+ "/usr/lib/llvm-14/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp -resource-dir /usr/lib/llvm-14/lib/clang/14.0.0 -dependency-file CMakeFiles/cmTC_375ec.dir/OpenMPTryFlag.c.o.d -MT CMakeFiles/cmTC_375ec.dir/OpenMPTryFlag.c.o -sys-header-deps -internal-isystem /usr/lib/llvm-14/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir=/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fopenmp -fopenmp-target-new-runtime -fgnuc-version=4.2.1 -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_375ec.dir/OpenMPTryFlag.c.o -x c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c
+clang -cc1 version 14.0.0 based upon LLVM 14.0.0 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/lib/llvm-14/lib/clang/14.0.0/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+#include <omp.h>
+         ^~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_375ec.dir/build.make:79: CMakeFiles/cmTC_375ec.dir/OpenMPTryFlag.c.o] Error 1
+gmake[1]: Leaving directory '/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_375ec/fast] Error 2
+
+
+
+Detecting C OpenMP failed with the following output:
+Change Dir: /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_3b4ba/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_3b4ba.dir/build.make CMakeFiles/cmTC_3b4ba.dir/build
+gmake[1]: Entering directory '/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3b4ba.dir/OpenMPTryFlag.c.o
+/usr/bin/clang   -fopenmp -v -MD -MT CMakeFiles/cmTC_3b4ba.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_3b4ba.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_3b4ba.dir/OpenMPTryFlag.c.o -c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c
+Ubuntu clang version 14.0.0-1ubuntu1
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ (in-process)
+ "/usr/lib/llvm-14/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp -resource-dir /usr/lib/llvm-14/lib/clang/14.0.0 -dependency-file CMakeFiles/cmTC_3b4ba.dir/OpenMPTryFlag.c.o.d -MT CMakeFiles/cmTC_3b4ba.dir/OpenMPTryFlag.c.o -sys-header-deps -internal-isystem /usr/lib/llvm-14/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir=/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fopenmp -fopenmp-target-new-runtime -fgnuc-version=4.2.1 -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_3b4ba.dir/OpenMPTryFlag.c.o -x c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c
+clang -cc1 version 14.0.0 based upon LLVM 14.0.0 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/lib/llvm-14/lib/clang/14.0.0/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+#include <omp.h>
+         ^~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_3b4ba.dir/build.make:79: CMakeFiles/cmTC_3b4ba.dir/OpenMPTryFlag.c.o] Error 1
+gmake[1]: Leaving directory '/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_3b4ba/fast] Error 2
+
+
+
+Detecting C OpenMP failed with the following output:
+Change Dir: /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_e0740/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_e0740.dir/build.make CMakeFiles/cmTC_e0740.dir/build
+gmake[1]: Entering directory '/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e0740.dir/OpenMPTryFlag.c.o
+/usr/bin/clang   -Xclang -fopenmp -v -MD -MT CMakeFiles/cmTC_e0740.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_e0740.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_e0740.dir/OpenMPTryFlag.c.o -c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c
+Ubuntu clang version 14.0.0-1ubuntu1
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ (in-process)
+ "/usr/lib/llvm-14/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp -resource-dir /usr/lib/llvm-14/lib/clang/14.0.0 -dependency-file CMakeFiles/cmTC_e0740.dir/OpenMPTryFlag.c.o.d -MT CMakeFiles/cmTC_e0740.dir/OpenMPTryFlag.c.o -sys-header-deps -internal-isystem /usr/lib/llvm-14/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir=/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fgnuc-version=4.2.1 -fopenmp -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_e0740.dir/OpenMPTryFlag.c.o -x c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c
+clang -cc1 version 14.0.0 based upon LLVM 14.0.0 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/lib/llvm-14/lib/clang/14.0.0/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+#include <omp.h>
+         ^~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_e0740.dir/build.make:79: CMakeFiles/cmTC_e0740.dir/OpenMPTryFlag.c.o] Error 1
+gmake[1]: Leaving directory '/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_e0740/fast] Error 2
+
+
+
+Detecting CXX OpenMP failed with the following output:
+Change Dir: /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_e0535/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_e0535.dir/build.make CMakeFiles/cmTC_e0535.dir/build
+gmake[1]: Entering directory '/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_e0535.dir/OpenMPTryFlag.cpp.o
+/usr/bin/clang++   -fopenmp=libomp -v -MD -MT CMakeFiles/cmTC_e0535.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_e0535.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_e0535.dir/OpenMPTryFlag.cpp.o -c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
+Ubuntu clang version 14.0.0-1ubuntu1
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ (in-process)
+ "/usr/lib/llvm-14/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp -resource-dir /usr/lib/llvm-14/lib/clang/14.0.0 -dependency-file CMakeFiles/cmTC_e0535.dir/OpenMPTryFlag.cpp.o.d -MT CMakeFiles/cmTC_e0535.dir/OpenMPTryFlag.cpp.o -sys-header-deps -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/backward -internal-isystem /usr/lib/llvm-14/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir=/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fopenmp -fopenmp-target-new-runtime -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_e0535.dir/OpenMPTryFlag.cpp.o -x c++ /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
+clang -cc1 version 14.0.0 based upon LLVM 14.0.0 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/backward
+ /usr/lib/llvm-14/lib/clang/14.0.0/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+#include <omp.h>
+         ^~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_e0535.dir/build.make:79: CMakeFiles/cmTC_e0535.dir/OpenMPTryFlag.cpp.o] Error 1
+gmake[1]: Leaving directory '/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_e0535/fast] Error 2
+
+
+
+Detecting CXX OpenMP failed with the following output:
+Change Dir: /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_756ef/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_756ef.dir/build.make CMakeFiles/cmTC_756ef.dir/build
+gmake[1]: Entering directory '/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_756ef.dir/OpenMPTryFlag.cpp.o
+/usr/bin/clang++   -fopenmp=libiomp5 -v -MD -MT CMakeFiles/cmTC_756ef.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_756ef.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_756ef.dir/OpenMPTryFlag.cpp.o -c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
+Ubuntu clang version 14.0.0-1ubuntu1
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ (in-process)
+ "/usr/lib/llvm-14/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp -resource-dir /usr/lib/llvm-14/lib/clang/14.0.0 -dependency-file CMakeFiles/cmTC_756ef.dir/OpenMPTryFlag.cpp.o.d -MT CMakeFiles/cmTC_756ef.dir/OpenMPTryFlag.cpp.o -sys-header-deps -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/backward -internal-isystem /usr/lib/llvm-14/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir=/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fopenmp -fopenmp-target-new-runtime -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_756ef.dir/OpenMPTryFlag.cpp.o -x c++ /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
+clang -cc1 version 14.0.0 based upon LLVM 14.0.0 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/backward
+ /usr/lib/llvm-14/lib/clang/14.0.0/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+#include <omp.h>
+         ^~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_756ef.dir/build.make:79: CMakeFiles/cmTC_756ef.dir/OpenMPTryFlag.cpp.o] Error 1
+gmake[1]: Leaving directory '/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_756ef/fast] Error 2
+
+
+
+Detecting CXX OpenMP failed with the following output:
+Change Dir: /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_0f956/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_0f956.dir/build.make CMakeFiles/cmTC_0f956.dir/build
+gmake[1]: Entering directory '/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_0f956.dir/OpenMPTryFlag.cpp.o
+/usr/bin/clang++   -fopenmp -v -MD -MT CMakeFiles/cmTC_0f956.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_0f956.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_0f956.dir/OpenMPTryFlag.cpp.o -c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
+Ubuntu clang version 14.0.0-1ubuntu1
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ (in-process)
+ "/usr/lib/llvm-14/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp -resource-dir /usr/lib/llvm-14/lib/clang/14.0.0 -dependency-file CMakeFiles/cmTC_0f956.dir/OpenMPTryFlag.cpp.o.d -MT CMakeFiles/cmTC_0f956.dir/OpenMPTryFlag.cpp.o -sys-header-deps -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/backward -internal-isystem /usr/lib/llvm-14/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir=/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fopenmp -fopenmp-target-new-runtime -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_0f956.dir/OpenMPTryFlag.cpp.o -x c++ /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
+clang -cc1 version 14.0.0 based upon LLVM 14.0.0 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/backward
+ /usr/lib/llvm-14/lib/clang/14.0.0/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+#include <omp.h>
+         ^~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_0f956.dir/build.make:79: CMakeFiles/cmTC_0f956.dir/OpenMPTryFlag.cpp.o] Error 1
+gmake[1]: Leaving directory '/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_0f956/fast] Error 2
+
+
+
+Detecting CXX OpenMP failed with the following output:
+Change Dir: /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_b21c1/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_b21c1.dir/build.make CMakeFiles/cmTC_b21c1.dir/build
+gmake[1]: Entering directory '/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_b21c1.dir/OpenMPTryFlag.cpp.o
+/usr/bin/clang++   -Xclang -fopenmp -v -MD -MT CMakeFiles/cmTC_b21c1.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_b21c1.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_b21c1.dir/OpenMPTryFlag.cpp.o -c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
+Ubuntu clang version 14.0.0-1ubuntu1
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ (in-process)
+ "/usr/lib/llvm-14/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp -resource-dir /usr/lib/llvm-14/lib/clang/14.0.0 -dependency-file CMakeFiles/cmTC_b21c1.dir/OpenMPTryFlag.cpp.o.d -MT CMakeFiles/cmTC_b21c1.dir/OpenMPTryFlag.cpp.o -sys-header-deps -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/backward -internal-isystem /usr/lib/llvm-14/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir=/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -fopenmp -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_b21c1.dir/OpenMPTryFlag.cpp.o -x c++ /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
+clang -cc1 version 14.0.0 based upon LLVM 14.0.0 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/backward
+ /usr/lib/llvm-14/lib/clang/14.0.0/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+#include <omp.h>
+         ^~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_b21c1.dir/build.make:79: CMakeFiles/cmTC_b21c1.dir/OpenMPTryFlag.cpp.o] Error 1
+gmake[1]: Leaving directory '/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_b21c1/fast] Error 2
+
+
+
+Detecting C OpenMP failed with the following output:
+Change Dir: /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_dc5ff/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_dc5ff.dir/build.make CMakeFiles/cmTC_dc5ff.dir/build
+gmake[1]: Entering directory '/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_dc5ff.dir/OpenMPTryFlag.c.o
+/usr/bin/clang   -fopenmp=libomp -v -MD -MT CMakeFiles/cmTC_dc5ff.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_dc5ff.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_dc5ff.dir/OpenMPTryFlag.c.o -c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c
+Ubuntu clang version 14.0.0-1ubuntu1
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ (in-process)
+ "/usr/lib/llvm-14/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp -resource-dir /usr/lib/llvm-14/lib/clang/14.0.0 -dependency-file CMakeFiles/cmTC_dc5ff.dir/OpenMPTryFlag.c.o.d -MT CMakeFiles/cmTC_dc5ff.dir/OpenMPTryFlag.c.o -sys-header-deps -internal-isystem /usr/lib/llvm-14/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir=/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fopenmp -fopenmp-target-new-runtime -fgnuc-version=4.2.1 -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_dc5ff.dir/OpenMPTryFlag.c.o -x c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c
+clang -cc1 version 14.0.0 based upon LLVM 14.0.0 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/lib/llvm-14/lib/clang/14.0.0/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+#include <omp.h>
+         ^~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_dc5ff.dir/build.make:79: CMakeFiles/cmTC_dc5ff.dir/OpenMPTryFlag.c.o] Error 1
+gmake[1]: Leaving directory '/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_dc5ff/fast] Error 2
+
+
+
+Detecting C OpenMP failed with the following output:
+Change Dir: /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_ccf17/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_ccf17.dir/build.make CMakeFiles/cmTC_ccf17.dir/build
+gmake[1]: Entering directory '/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ccf17.dir/OpenMPTryFlag.c.o
+/usr/bin/clang   -fopenmp=libiomp5 -v -MD -MT CMakeFiles/cmTC_ccf17.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_ccf17.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_ccf17.dir/OpenMPTryFlag.c.o -c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c
+Ubuntu clang version 14.0.0-1ubuntu1
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ (in-process)
+ "/usr/lib/llvm-14/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp -resource-dir /usr/lib/llvm-14/lib/clang/14.0.0 -dependency-file CMakeFiles/cmTC_ccf17.dir/OpenMPTryFlag.c.o.d -MT CMakeFiles/cmTC_ccf17.dir/OpenMPTryFlag.c.o -sys-header-deps -internal-isystem /usr/lib/llvm-14/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir=/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fopenmp -fopenmp-target-new-runtime -fgnuc-version=4.2.1 -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_ccf17.dir/OpenMPTryFlag.c.o -x c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c
+clang -cc1 version 14.0.0 based upon LLVM 14.0.0 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/lib/llvm-14/lib/clang/14.0.0/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+#include <omp.h>
+         ^~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_ccf17.dir/build.make:79: CMakeFiles/cmTC_ccf17.dir/OpenMPTryFlag.c.o] Error 1
+gmake[1]: Leaving directory '/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_ccf17/fast] Error 2
+
+
+
+Detecting C OpenMP failed with the following output:
+Change Dir: /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_1db43/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_1db43.dir/build.make CMakeFiles/cmTC_1db43.dir/build
+gmake[1]: Entering directory '/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1db43.dir/OpenMPTryFlag.c.o
+/usr/bin/clang   -fopenmp -v -MD -MT CMakeFiles/cmTC_1db43.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_1db43.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_1db43.dir/OpenMPTryFlag.c.o -c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c
+Ubuntu clang version 14.0.0-1ubuntu1
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ (in-process)
+ "/usr/lib/llvm-14/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp -resource-dir /usr/lib/llvm-14/lib/clang/14.0.0 -dependency-file CMakeFiles/cmTC_1db43.dir/OpenMPTryFlag.c.o.d -MT CMakeFiles/cmTC_1db43.dir/OpenMPTryFlag.c.o -sys-header-deps -internal-isystem /usr/lib/llvm-14/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir=/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fopenmp -fopenmp-target-new-runtime -fgnuc-version=4.2.1 -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_1db43.dir/OpenMPTryFlag.c.o -x c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c
+clang -cc1 version 14.0.0 based upon LLVM 14.0.0 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/lib/llvm-14/lib/clang/14.0.0/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+#include <omp.h>
+         ^~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_1db43.dir/build.make:79: CMakeFiles/cmTC_1db43.dir/OpenMPTryFlag.c.o] Error 1
+gmake[1]: Leaving directory '/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_1db43/fast] Error 2
+
+
+
+Detecting C OpenMP failed with the following output:
+Change Dir: /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_f27dc/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_f27dc.dir/build.make CMakeFiles/cmTC_f27dc.dir/build
+gmake[1]: Entering directory '/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f27dc.dir/OpenMPTryFlag.c.o
+/usr/bin/clang   -Xclang -fopenmp -v -MD -MT CMakeFiles/cmTC_f27dc.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_f27dc.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_f27dc.dir/OpenMPTryFlag.c.o -c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c
+Ubuntu clang version 14.0.0-1ubuntu1
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ (in-process)
+ "/usr/lib/llvm-14/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp -resource-dir /usr/lib/llvm-14/lib/clang/14.0.0 -dependency-file CMakeFiles/cmTC_f27dc.dir/OpenMPTryFlag.c.o.d -MT CMakeFiles/cmTC_f27dc.dir/OpenMPTryFlag.c.o -sys-header-deps -internal-isystem /usr/lib/llvm-14/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir=/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fgnuc-version=4.2.1 -fopenmp -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_f27dc.dir/OpenMPTryFlag.c.o -x c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c
+clang -cc1 version 14.0.0 based upon LLVM 14.0.0 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/lib/llvm-14/lib/clang/14.0.0/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+#include <omp.h>
+         ^~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_f27dc.dir/build.make:79: CMakeFiles/cmTC_f27dc.dir/OpenMPTryFlag.c.o] Error 1
+gmake[1]: Leaving directory '/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_f27dc/fast] Error 2
+
+
+
+Detecting CXX OpenMP failed with the following output:
+Change Dir: /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_bbdd1/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_bbdd1.dir/build.make CMakeFiles/cmTC_bbdd1.dir/build
+gmake[1]: Entering directory '/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_bbdd1.dir/OpenMPTryFlag.cpp.o
+/usr/bin/clang++   -fopenmp=libomp -v -MD -MT CMakeFiles/cmTC_bbdd1.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_bbdd1.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_bbdd1.dir/OpenMPTryFlag.cpp.o -c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
+Ubuntu clang version 14.0.0-1ubuntu1
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ (in-process)
+ "/usr/lib/llvm-14/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp -resource-dir /usr/lib/llvm-14/lib/clang/14.0.0 -dependency-file CMakeFiles/cmTC_bbdd1.dir/OpenMPTryFlag.cpp.o.d -MT CMakeFiles/cmTC_bbdd1.dir/OpenMPTryFlag.cpp.o -sys-header-deps -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/backward -internal-isystem /usr/lib/llvm-14/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir=/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fopenmp -fopenmp-target-new-runtime -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_bbdd1.dir/OpenMPTryFlag.cpp.o -x c++ /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
+clang -cc1 version 14.0.0 based upon LLVM 14.0.0 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/backward
+ /usr/lib/llvm-14/lib/clang/14.0.0/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+#include <omp.h>
+         ^~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_bbdd1.dir/build.make:79: CMakeFiles/cmTC_bbdd1.dir/OpenMPTryFlag.cpp.o] Error 1
+gmake[1]: Leaving directory '/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_bbdd1/fast] Error 2
+
+
+
+Detecting CXX OpenMP failed with the following output:
+Change Dir: /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_e2490/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_e2490.dir/build.make CMakeFiles/cmTC_e2490.dir/build
+gmake[1]: Entering directory '/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_e2490.dir/OpenMPTryFlag.cpp.o
+/usr/bin/clang++   -fopenmp=libiomp5 -v -MD -MT CMakeFiles/cmTC_e2490.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_e2490.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_e2490.dir/OpenMPTryFlag.cpp.o -c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
+Ubuntu clang version 14.0.0-1ubuntu1
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ (in-process)
+ "/usr/lib/llvm-14/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp -resource-dir /usr/lib/llvm-14/lib/clang/14.0.0 -dependency-file CMakeFiles/cmTC_e2490.dir/OpenMPTryFlag.cpp.o.d -MT CMakeFiles/cmTC_e2490.dir/OpenMPTryFlag.cpp.o -sys-header-deps -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/backward -internal-isystem /usr/lib/llvm-14/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir=/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fopenmp -fopenmp-target-new-runtime -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_e2490.dir/OpenMPTryFlag.cpp.o -x c++ /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
+clang -cc1 version 14.0.0 based upon LLVM 14.0.0 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/backward
+ /usr/lib/llvm-14/lib/clang/14.0.0/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+#include <omp.h>
+         ^~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_e2490.dir/build.make:79: CMakeFiles/cmTC_e2490.dir/OpenMPTryFlag.cpp.o] Error 1
+gmake[1]: Leaving directory '/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_e2490/fast] Error 2
+
+
+
+Detecting CXX OpenMP failed with the following output:
+Change Dir: /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_f9a04/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_f9a04.dir/build.make CMakeFiles/cmTC_f9a04.dir/build
+gmake[1]: Entering directory '/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_f9a04.dir/OpenMPTryFlag.cpp.o
+/usr/bin/clang++   -fopenmp -v -MD -MT CMakeFiles/cmTC_f9a04.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_f9a04.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_f9a04.dir/OpenMPTryFlag.cpp.o -c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
+Ubuntu clang version 14.0.0-1ubuntu1
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ (in-process)
+ "/usr/lib/llvm-14/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp -resource-dir /usr/lib/llvm-14/lib/clang/14.0.0 -dependency-file CMakeFiles/cmTC_f9a04.dir/OpenMPTryFlag.cpp.o.d -MT CMakeFiles/cmTC_f9a04.dir/OpenMPTryFlag.cpp.o -sys-header-deps -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/backward -internal-isystem /usr/lib/llvm-14/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir=/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fopenmp -fopenmp-target-new-runtime -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_f9a04.dir/OpenMPTryFlag.cpp.o -x c++ /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
+clang -cc1 version 14.0.0 based upon LLVM 14.0.0 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/backward
+ /usr/lib/llvm-14/lib/clang/14.0.0/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+#include <omp.h>
+         ^~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_f9a04.dir/build.make:79: CMakeFiles/cmTC_f9a04.dir/OpenMPTryFlag.cpp.o] Error 1
+gmake[1]: Leaving directory '/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_f9a04/fast] Error 2
+
+
+
+Detecting CXX OpenMP failed with the following output:
+Change Dir: /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_ddb76/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_ddb76.dir/build.make CMakeFiles/cmTC_ddb76.dir/build
+gmake[1]: Entering directory '/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_ddb76.dir/OpenMPTryFlag.cpp.o
+/usr/bin/clang++   -Xclang -fopenmp -v -MD -MT CMakeFiles/cmTC_ddb76.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_ddb76.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_ddb76.dir/OpenMPTryFlag.cpp.o -c /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
+Ubuntu clang version 14.0.0-1ubuntu1
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ (in-process)
+ "/usr/lib/llvm-14/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp -resource-dir /usr/lib/llvm-14/lib/clang/14.0.0 -dependency-file CMakeFiles/cmTC_ddb76.dir/OpenMPTryFlag.cpp.o.d -MT CMakeFiles/cmTC_ddb76.dir/OpenMPTryFlag.cpp.o -sys-header-deps -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/backward -internal-isystem /usr/lib/llvm-14/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir=/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -fopenmp -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_ddb76.dir/OpenMPTryFlag.cpp.o -x c++ /home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
+clang -cc1 version 14.0.0 based upon LLVM 14.0.0 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/backward
+ /usr/lib/llvm-14/lib/clang/14.0.0/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+#include <omp.h>
+         ^~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_ddb76.dir/build.make:79: CMakeFiles/cmTC_ddb76.dir/OpenMPTryFlag.cpp.o] Error 1
+gmake[1]: Leaving directory '/home/max/VUW/Cgra350/Project/CGRA350_Framework/work/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_ddb76/fast] Error 2
+
+
+

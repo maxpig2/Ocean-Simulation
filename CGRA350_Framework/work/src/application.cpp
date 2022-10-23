@@ -270,31 +270,42 @@ void Application::renderGUI() {
 		m_model.amplitude = 1;
 		m_model.waveLength = 1;
 		m_model.gravity = 9.81;
-		m_model.waveNumber = 10;
-		oceanMeshDivisions = 100;
-		oceanMeshRadius = 200;
+		m_model.waveNumber = 15;
+		oceanMeshDivisions = 300;
+		oceanMeshRadius = 150;
 		m_model.mesh = createOceanMesh(oceanMeshDivisions, oceanMeshRadius);
-		m_model.oceanFetch = 10;
+		m_model.oceanFetch = 5;
 		m_model.windSpeed = 10;
 		m_model.choppiness = 0.5;
 		m_model.color = vec3(0, 0.3, 0.5);
 	}
 	ImGui::SameLine();
-	if(ImGui::Button("Large Ocean")){
-		m_model.amplitude = 20;
-		m_model.waveLength = 1;
+	if(ImGui::Button("Bumpy Ocean")){
+		m_model.amplitude = 1;
+		m_model.waveLength = 4;
 		m_model.gravity = 9.81;
-		m_model.waveNumber = 25;
-		oceanMeshDivisions = 200;
-		oceanMeshRadius = 400;
+		m_model.waveNumber = 15;
+		oceanMeshDivisions = 300;
+		oceanMeshRadius = 150;
 		m_model.mesh = createOceanMesh(oceanMeshDivisions, oceanMeshRadius);
-		m_model.oceanFetch = 8;
+		m_model.oceanFetch = 10;
 		m_model.windSpeed = 10;
-		m_model.choppiness = 0.2;
+		m_model.choppiness = 0.41;
+		m_model.color = vec3(0, 0.3, 0.5);
 	}
 	ImGui::SameLine();
-	if(ImGui::Button("Tropical Ocean")){
-
+	if(ImGui::Button("Choppy Ocean")){
+		m_model.amplitude = 1;
+		m_model.waveLength = 2.5;
+		m_model.gravity = 9.81;
+		m_model.waveNumber = 21;
+		oceanMeshDivisions = 300;
+		oceanMeshRadius = 100;
+		m_model.mesh = createOceanMesh(oceanMeshDivisions, oceanMeshRadius);
+		m_model.oceanFetch = 10;
+		m_model.windSpeed = 10;
+		m_model.choppiness = 1.0;
+		m_model.color = vec3(0, 0.3, 0.5);
 		m_model.color = vec3(0, 0.44, 0.80);
 	}
 
